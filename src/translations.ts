@@ -150,6 +150,60 @@ export interface Translations {
     };
     copyright: string;
   };
+
+  // About page
+  about: {
+    title: string;
+    subtitle: string;
+    story: {
+      title: string;
+      content: string;
+    };
+    mission: {
+      title: string;
+      content: string;
+    };
+    team: {
+      title: string;
+      content: string;
+    };
+  };
+
+  // Vision page
+  vision: {
+    title: string;
+    subtitle: string;
+    ourVision: {
+      title: string;
+      content: string;
+    };
+    values: {
+      title: string;
+      innovation: string;
+      quality: string;
+      support: string;
+      community: string;
+    };
+  };
+
+  // Contact page
+  contact: {
+    title: string;
+    subtitle: string;
+    form: {
+      name: string;
+      email: string;
+      subject: string;
+      message: string;
+      send: string;
+    };
+    info: {
+      address: string;
+      phone: string;
+      email: string;
+      hours: string;
+    };
+  };
 }
 
 // Arabic translations
@@ -167,19 +221,19 @@ export const ar: Translations = {
     language: "اللغة"
   },
   hero: {
-    title: "Apex ReportCraft (ARD)",
+    title: "Apex ReportCraft (ARC)",
     subtitle: "الحل الأول للتقارير في Oracle APEX",
-    description: "أنشئ تقارير احترافية وتفاعلية في دقائق مع ARD - الأداة الوحيدة المدمجة أصلياً في APEX مع دعم كامل للعربية ومساعد الذكاء الاصطناعي. من SQL إلى تقارير جميلة في دقائق، وليس ساعات.",
+    description: "أنشئ تقارير احترافية وتفاعلية في دقائق مع ARC - الأداة الوحيدة المدمجة أصلياً في APEX مع دعم كامل للعربية ومساعد الذكاء الاصطناعي. من SQL إلى تقارير جميلة في دقائق، وليس ساعات.",
     ctaPrimary: "ابدأ مجاناً",
     ctaSecondary: "شاهد العرض التوضيحي",
     watchDemo: "مشاهدة العرض"
   },
   features: {
-    title: "لماذا Apex ReportCraft (ARD)؟",
+    title: "لماذا Apex ReportCraft (ARC)؟",
     subtitle: "الحل الوحيد للتقارير المتطورة في Oracle APEX - مصمم خصيصاً للمطورين والمؤسسات",
     easyToUse: {
       title: "تكامل APEX أصلي",
-      description: "لا حاجة لخوادم خارجية أو إعدادات معقدة. ARD يعمل بشكل كامل داخل قاعدة البيانات كحزمة PL/SQL أصلية"
+      description: "لا حاجة لخوادم خارجية أو إعدادات معقدة. ARC يعمل بشكل كامل داخل قاعدة البيانات كحزمة PL/SQL أصلية"
     },
     apexNative: {
       title: "مساعد التصميم بالذكاء الاصطناعي",
@@ -326,6 +380,57 @@ export const ar: Translations = {
       security: "الأمان"
     },
     copyright: "© 2024 Apex ReportCraft. جميع الحقوق محفوظة."
+  },
+
+  about: {
+    title: "من نحن",
+    subtitle: "نحن فريق من الخبراء المتخصصين في تطوير حلول التقارير لـ Oracle APEX",
+    story: {
+      title: "قصتنا",
+      content: "بدأت رحلتنا من إدراك الحاجة الماسة لحل تقارير احترافي ومتكامل مع Oracle APEX. مع سنوات من الخبرة في تطوير التطبيقات والتقارير، قررنا إنشاء ARC لتكون الأداة الأولى والوحيدة التي تجمع بين السهولة والقوة والدعم الكامل للغة العربية."
+    },
+    mission: {
+      title: "مهمتنا",
+      content: "مهمتنا هي تمكين المطورين والمؤسسات من إنشاء تقارير احترافية وتفاعلية بسهولة وسرعة، مع التركيز على الجودة والابتكار والدعم المتميز للمنطقة العربية."
+    },
+    team: {
+      title: "فريقنا",
+      content: "فريقنا مكون من خبراء في Oracle APEX وتطوير التقارير والذكاء الاصطناعي، جميعهم ملتزمون بتقديم أفضل تجربة للمستخدمين في المنطقة العربية وحول العالم."
+    }
+  },
+
+  vision: {
+    title: "رؤيتنا",
+    subtitle: "نسعى لأن نكون الحل الأول والأكثر ثقة في عالم تقارير Oracle APEX",
+    ourVision: {
+      title: "رؤيتنا",
+      content: "أن نصبح المعيار الذهبي لحلول التقارير في Oracle APEX على مستوى العالم، مع كوننا الرائدين في دعم اللغة العربية والمنطقة الخليجية، وأن نمكن كل مطور ومؤسسة من تحويل البيانات إلى قصص مؤثرة وقرارات ذكية."
+    },
+    values: {
+      title: "قيمنا",
+      innovation: "الابتكار: نبتكر باستمرار لنقدم أحدث التقنيات مثل الذكاء الاصطناعي في التصميم",
+      quality: "الجودة: نسعى للتميز في كل جانب من جوانب منتجنا وخدماتنا",
+      support: "الدعم: نقدم دعماً متميزاً باللغة العربية على مدار 24/7",
+      community: "المجتمع: نبني مجتمعاً قوياً من المطورين والخبراء في المنطقة"
+    }
+  },
+
+  contact: {
+    title: "تواصل معنا",
+    subtitle: "نحن هنا لمساعدتك. تواصل معنا في أي وقت وسنكون سعداء للإجابة على استفساراتك",
+    form: {
+      name: "الاسم الكامل",
+      email: "البريد الإلكتروني",
+      subject: "الموضوع",
+      message: "الرسالة",
+      send: "إرسال الرسالة"
+    },
+    info: {
+      address: "المملكة العربية السعودية، الرياض",
+      phone: "+966 50 123 4567",
+      email: "info@apexreportcraft.com",
+      hours: "الأحد - الخميس: 9:00 ص - 6:00 م"
+    }
   }
 };
 
@@ -344,19 +449,19 @@ export const en: Translations = {
     language: "Language"
   },
   hero: {
-    title: "Apex ReportCraft (ARD)",
+    title: "Apex ReportCraft (ARC)",
     subtitle: "The #1 Reporting Solution for Oracle APEX",
-    description: "Create professional, interactive reports in minutes with ARD - the only natively integrated APEX reporting tool with complete Arabic support and AI-powered design assistant. From SQL to beautiful reports in minutes, not hours.",
+    description: "Create professional, interactive reports in minutes with ARC - the only natively integrated APEX reporting tool with complete Arabic support and AI-powered design assistant. From SQL to beautiful reports in minutes, not hours.",
     ctaPrimary: "Start Free",
     ctaSecondary: "Watch Demo",
     watchDemo: "Watch Demo"
   },
   features: {
-    title: "Why Apex ReportCraft (ARD)?",
+    title: "Why Apex ReportCraft (ARC)?",
     subtitle: "The only advanced reporting solution for Oracle APEX - designed specifically for developers and enterprises",
     easyToUse: {
       title: "APEX-Native Integration",
-      description: "No external servers or complex setups required. ARD runs entirely within the database as a native PL/SQL package"
+      description: "No external servers or complex setups required. ARC runs entirely within the database as a native PL/SQL package"
     },
     apexNative: {
       title: "AI Design Assistant",
@@ -503,6 +608,57 @@ export const en: Translations = {
       security: "Security"
     },
     copyright: "© 2024 Apex ReportCraft. All rights reserved."
+  },
+
+  about: {
+    title: "About Us",
+    subtitle: "We are a team of experts specialized in developing reporting solutions for Oracle APEX",
+    story: {
+      title: "Our Story",
+      content: "Our journey began with recognizing the urgent need for a professional and integrated reporting solution for Oracle APEX. With years of experience in application and report development, we decided to create ARC to be the first and only tool that combines ease, power, and complete Arabic language support."
+    },
+    mission: {
+      title: "Our Mission",
+      content: "Our mission is to empower developers and organizations to create professional and interactive reports easily and quickly, focusing on quality, innovation, and excellent support for the Arab region."
+    },
+    team: {
+      title: "Our Team",
+      content: "Our team consists of experts in Oracle APEX, report development, and artificial intelligence, all committed to providing the best user experience in the Arab region and around the world."
+    }
+  },
+
+  vision: {
+    title: "Our Vision",
+    subtitle: "We strive to be the first and most trusted solution in the world of Oracle APEX reporting",
+    ourVision: {
+      title: "Our Vision",
+      content: "To become the gold standard for reporting solutions in Oracle APEX worldwide, while being the leaders in Arabic language support and the Gulf region, enabling every developer and organization to transform data into impactful stories and smart decisions."
+    },
+    values: {
+      title: "Our Values",
+      innovation: "Innovation: We continuously innovate to deliver the latest technologies like AI in design",
+      quality: "Quality: We strive for excellence in every aspect of our product and services",
+      support: "Support: We provide exceptional Arabic language support 24/7",
+      community: "Community: We build a strong community of developers and experts in the region"
+    }
+  },
+
+  contact: {
+    title: "Contact Us",
+    subtitle: "We're here to help you. Contact us anytime and we'll be happy to answer your questions",
+    form: {
+      name: "Full Name",
+      email: "Email Address",
+      subject: "Subject",
+      message: "Message",
+      send: "Send Message"
+    },
+    info: {
+      address: "Saudi Arabia, Riyadh",
+      phone: "+966 50 123 4567",
+      email: "info@apexreportcraft.com",
+      hours: "Sunday - Thursday: 9:00 AM - 6:00 PM"
+    }
   }
 };
 
