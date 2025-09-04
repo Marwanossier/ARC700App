@@ -1,13 +1,36 @@
 {
-  "name": "webapp",
+  "name": "apex-reportcraft",
   "type": "module",
+  "description": "Professional reporting tool for Oracle APEX developers - Multilingual website",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
+    "dev:sandbox": "wrangler pages dev dist --ip 0.0.0.0 --port 3000",
     "build": "vite build",
-    "preview": "wrangler pages dev",
-    "deploy": "npm run build && wrangler pages deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+    "preview": "wrangler pages dev dist",
+    "deploy": "npm run build && wrangler pages deploy dist",
+    "deploy:prod": "npm run build && wrangler pages deploy dist --project-name apex-reportcraft",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "clean-port": "fuser -k 3000/tcp 2>/dev/null || true",
+    "test": "curl http://localhost:3000",
+    "start": "pm2 start ecosystem.config.cjs",
+    "stop": "pm2 delete apex-reportcraft",
+    "restart": "pm2 restart apex-reportcraft",
+    "logs": "pm2 logs apex-reportcraft --nostream",
+    "git:init": "git init && git add . && git commit -m 'Initial commit'",
+    "git:commit": "git add . && git commit -m",
+    "git:status": "git status",
+    "git:log": "git log --oneline"
   },
+  "keywords": [
+    "apex",
+    "reportcraft",
+    "oracle",
+    "reporting",
+    "multilingual",
+    "hono",
+    "cloudflare"
+  ],
   "dependencies": {
     "hono": "^4.9.6"
   },
