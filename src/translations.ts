@@ -60,14 +60,14 @@ export interface Translations {
     subtitle: string;
     monthly: string;
     yearly: string;
-    starter: {
+    free: {
       name: string;
       price: string;
       description: string;
       features: string[];
       cta: string;
     };
-    professional: {
+    pro: {
       name: string;
       price: string;
       description: string;
@@ -75,7 +75,21 @@ export interface Translations {
       cta: string;
       popular: string;
     };
+    developer: {
+      name: string;
+      price: string;
+      description: string;
+      features: string[];
+      cta: string;
+    };
     enterprise: {
+      name: string;
+      price: string;
+      description: string;
+      features: string[];
+      cta: string;
+    };
+    whiteLabel: {
       name: string;
       price: string;
       description: string;
@@ -153,82 +167,94 @@ export const ar: Translations = {
     language: "اللغة"
   },
   hero: {
-    title: "Apex ReportCraft",
-    subtitle: "أداة التقارير الاحترافية",
-    description: "أنشئ تقارير احترافية وتفاعلية بسهولة مع Apex ReportCraft. واجهة مألوفة مثل Oracle APEX Developer مع إمكانيات متقدمة لإنشاء التقارير.",
-    ctaPrimary: "جرب مجاناً",
+    title: "Apex ReportCraft (ARD)",
+    subtitle: "الحل الأول للتقارير في Oracle APEX",
+    description: "أنشئ تقارير احترافية وتفاعلية في دقائق مع ARD - الأداة الوحيدة المدمجة أصلياً في APEX مع دعم كامل للعربية ومساعد الذكاء الاصطناعي. من SQL إلى تقارير جميلة في دقائق، وليس ساعات.",
+    ctaPrimary: "ابدأ مجاناً",
     ctaSecondary: "شاهد العرض التوضيحي",
     watchDemo: "مشاهدة العرض"
   },
   features: {
-    title: "لماذا Apex ReportCraft؟",
-    subtitle: "اكتشف المميزات التي تجعل أداتنا الخيار الأمثل للمطورين",
+    title: "لماذا Apex ReportCraft (ARD)؟",
+    subtitle: "الحل الوحيد للتقارير المتطورة في Oracle APEX - مصمم خصيصاً للمطورين والمؤسسات",
     easyToUse: {
-      title: "سهولة الاستخدام",
-      description: "واجهة مألوفة تشبه Oracle APEX Developer، مما يجعل التعلم والاستخدام سريعاً وسهلاً"
+      title: "تكامل APEX أصلي",
+      description: "لا حاجة لخوادم خارجية أو إعدادات معقدة. ARD يعمل بشكل كامل داخل قاعدة البيانات كحزمة PL/SQL أصلية"
     },
     apexNative: {
-      title: "Native APEX",
-      description: "مبنية خصيصاً لبيئة Oracle APEX مع دعم كامل لجميع مكونات النظام"
+      title: "مساعد التصميم بالذكاء الاصطناعي",
+      description: "اقتراحات ذكية للتخطيط والتصور والتنسيق تحول إنشاء التقارير إلى تجربة بديهية"
     },
     quickLearning: {
-      title: "تعلم سريع",
-      description: "منحنى تعلم قصير للمطورين المعتادين على بيئة Oracle APEX"
+      title: "دعم العربية الكامل",
+      description: "دعم أصلي للغة العربية مع تخطيط من اليمين لليسار وقوالب محلية - الأول من نوعه في السوق"
     },
     powerful: {
-      title: "قوية ومرنة",
-      description: "إمكانيات متقدمة لإنشاء تقارير معقدة وتفاعلية مع أداء عالي"
+      title: "منشئ السحب والإفلات",
+      description: "إنشاء تقارير معقدة بالسحب والإفلات في دقائق معدودة، مع معاينة فورية ومرونة كاملة"
     },
     flexible: {
-      title: "تخصيص مرن",
-      description: "قوالب قابلة للتخصيص ومكونات يمكن إعادة استخدامها"
+      title: "التقارير الفرعية والمحورية",
+      description: "قدرات متقدمة للتقارير متعددة المستويات مع إمكانيات التنقل والاستكشاف التفاعلي"
     },
     secure: {
-      title: "آمنة وموثوقة",
-      description: "معايير أمان عالية مع دعم التشفير والمصادقة المتقدمة"
+      title: "تعاون الفريق والأمان",
+      description: "ميزات تعاون متقدمة مع أذونات دقيقة وأمان على مستوى المؤسسة"
     }
   },
   pricing: {
     title: "خطط الاشتراك",
-    subtitle: "اختر الخطة المناسبة لاحتياجاتك",
+    subtitle: "خطط مرنة مصممة لجميع احتياجاتك - من المطورين الأفراد إلى المؤسسات الكبيرة",
     monthly: "شهرياً",
     yearly: "سنوياً",
-    starter: {
-      name: "المبتدئ",
-      price: "$29",
-      description: "مثالية للمشاريع الصغيرة والفردية",
+    free: {
+      name: "مجاني",
+      price: "$0",
+      description: "مثالي للمطورين الأفراد والطلاب",
       features: [
-        "حتى 10 تقارير",
-        "5 GB تخزين",
-        "دعم عبر البريد الإلكتروني",
-        "قوالب أساسية",
-        "تصدير PDF"
+        "تقارير أساسية",
+        "5 قوالب تقارير",
+        "تصدير PDF",
+        "دعم المجتمع",
+        "تكامل APEX أساسي"
       ],
       cta: "ابدأ مجاناً"
     },
-    professional: {
-      name: "المحترف",
-      price: "$99",
-      description: "للفرق والشركات المتوسطة",
+    pro: {
+      name: "احترافي",
+      price: "$49",
+      description: "للفرق الصغيرة والمتوسطة",
+      features: [
+        "تقارير متقدمة",
+        "50 قالب",
+        "التقارير الفرعية",
+        "الجداول المحورية",
+        "دعم البريد الإلكتروني",
+        "تصدير متعدد الأشكال"
+      ],
+      cta: "اشترك الآن",
+      popular: "الأكثر شعبية"
+    },
+    developer: {
+      name: "مطور",
+      price: "$199",
+      description: "لرخصة مطور واحد مع ميزات متقدمة",
       features: [
         "تقارير غير محدودة",
-        "100 GB تخزين",
-        "دعم أولوية",
-        "قوالب متقدمة",
-        "تصدير متعدد الأشكال",
-        "التعاون الجماعي",
-        "API متقدم"
+        "+100 قالب",
+        "مساعد التصميم بالذكاء الاصطناعي",
+        "تعاون الفريق",
+        "تكامل ERP/CRM",
+        "دعم الأولوية 24/7"
       ],
-      cta: "جرب 14 يوم مجاناً",
-      popular: "الأكثر شعبية"
+      cta: "رخصة المطور"
     },
     enterprise: {
       name: "المؤسسة",
-      price: "حسب الطلب",
-      description: "للمؤسسات الكبيرة مع احتياجات خاصة",
+      price: "$299",
+      description: "للمؤسسات مع احتياجات شاملة",
       features: [
-        "كل مميزات المحترف",
-        "تخزين غير محدود",
+        "جميع مميزات المطور",
         "دعم مخصص 24/7",
         "تدريب مخصص",
         "SLA مضمون",
@@ -236,25 +262,39 @@ export const ar: Translations = {
         "تخصيص كامل"
       ],
       cta: "تواصل معنا"
+    },
+    whiteLabel: {
+      name: "العلامة البيضاء",
+      price: "$5,000",
+      description: "لمقدمي البرمجيات والشركاء",
+      features: [
+        "إعادة العلامة التجارية الكاملة",
+        "مستخدمين نهائيين غير محدودين",
+        "وصول لكود المصدر",
+        "حقوق التوزيع",
+        "مدير دعم مخصص",
+        "تكامل API كامل"
+      ],
+      cta: "استفسار الشراكة"
     }
   },
   community: {
-    title: "انضم إلى مجتمعنا",
-    subtitle: "تواصل مع المطورين والخبراء من جميع أنحاء العالم",
+    title: "شبكة الشركاء والمجتمع",
+    subtitle: "انضم إلى شبكة المطورين والشركاء في دول الخليج والعالم",
     discord: {
-      title: "Discord",
-      description: "تواصل مع المجتمع في الوقت الفعلي",
-      members: "عضو+"
+      title: "مجتمع المطورين",
+      description: "تواصل مع مطوري APEX وشارك التجارب",
+      members: "مطور+"
     },
     forum: {
-      title: "المنتدى",
-      description: "اطرح الأسئلة وشارك الخبرات",
-      topics: "موضوع+"
+      title: "الدعم العربي",
+      description: "مركز دعم متخصص باللغة العربية 24/7",
+      topics: "استفسار+"
     },
     github: {
-      title: "GitHub",
-      description: "ساهم في تطوير المشروع",
-      stars: "نجمة+"
+      title: "الشراكات الإقليمية",
+      description: "شبكة شركاء Oracle معتمدين في دول الخليج",
+      stars: "شريك+"
     }
   },
   footer: {
@@ -304,108 +344,134 @@ export const en: Translations = {
     language: "Language"
   },
   hero: {
-    title: "Apex ReportCraft",
-    subtitle: "Professional Reporting Tool",
-    description: "Create professional and interactive reports easily with Apex ReportCraft. Familiar interface like Oracle APEX Developer with advanced reporting capabilities.",
-    ctaPrimary: "Try for Free",
+    title: "Apex ReportCraft (ARD)",
+    subtitle: "The #1 Reporting Solution for Oracle APEX",
+    description: "Create professional, interactive reports in minutes with ARD - the only natively integrated APEX reporting tool with complete Arabic support and AI-powered design assistant. From SQL to beautiful reports in minutes, not hours.",
+    ctaPrimary: "Start Free",
     ctaSecondary: "Watch Demo",
     watchDemo: "Watch Demo"
   },
   features: {
-    title: "Why Apex ReportCraft?",
-    subtitle: "Discover the features that make our tool the perfect choice for developers",
+    title: "Why Apex ReportCraft (ARD)?",
+    subtitle: "The only advanced reporting solution for Oracle APEX - designed specifically for developers and enterprises",
     easyToUse: {
-      title: "Easy to Use",
-      description: "Familiar interface similar to Oracle APEX Developer, making learning and usage quick and easy"
+      title: "APEX-Native Integration",
+      description: "No external servers or complex setups required. ARD runs entirely within the database as a native PL/SQL package"
     },
     apexNative: {
-      title: "Native APEX",
-      description: "Built specifically for Oracle APEX environment with full support for all system components"
+      title: "AI Design Assistant",
+      description: "Smart recommendations for layouts, visualizations, and formatting that transform report creation into an intuitive experience"
     },
     quickLearning: {
-      title: "Quick Learning",
-      description: "Short learning curve for developers familiar with Oracle APEX environment"
+      title: "Complete Arabic Support",
+      description: "Native Arabic language support with right-to-left layouts and localized templates - first of its kind in the market"
     },
     powerful: {
-      title: "Powerful & Flexible",
-      description: "Advanced capabilities for creating complex and interactive reports with high performance"
+      title: "Drag-and-Drop Builder",
+      description: "Create complex reports with drag-and-drop in minutes, featuring live preview and complete flexibility"
     },
     flexible: {
-      title: "Flexible Customization",
-      description: "Customizable templates and reusable components"
+      title: "Sub-Reports & Pivot Tables",
+      description: "Advanced multi-level reporting capabilities with interactive drill-down and exploration features"
     },
     secure: {
-      title: "Secure & Reliable",
-      description: "High security standards with encryption and advanced authentication support"
+      title: "Team Collaboration & Security",
+      description: "Advanced collaboration features with granular permissions and enterprise-grade security"
     }
   },
   pricing: {
-    title: "Subscription Plans",
-    subtitle: "Choose the plan that fits your needs",
+    title: "Flexible Pricing Plans",
+    subtitle: "From individual developers to large enterprises - we have the right plan for you",
     monthly: "Monthly",
     yearly: "Yearly",
-    starter: {
-      name: "Starter",
-      price: "$29",
-      description: "Perfect for small projects and individuals",
+    free: {
+      name: "Free",
+      price: "$0",
+      description: "Perfect for individual developers and students",
       features: [
-        "Up to 10 reports",
-        "5 GB storage",
-        "Email support",
-        "Basic templates",
-        "PDF export"
+        "Basic Reports",
+        "5 Report Templates",
+        "PDF Export",
+        "Community Support",
+        "Basic APEX Integration"
       ],
-      cta: "Start Free"
+      cta: "Get Started"
     },
-    professional: {
-      name: "Professional",
-      price: "$99",
-      description: "For teams and medium-sized companies",
+    pro: {
+      name: "Pro",
+      price: "$49",
+      description: "For small and medium teams",
       features: [
-        "Unlimited reports",
-        "100 GB storage",
-        "Priority support",
-        "Advanced templates",
-        "Multi-format export",
-        "Team collaboration",
-        "Advanced API"
+        "Advanced Reports",
+        "50 Templates",
+        "Sub-Reports",
+        "Pivot Tables",
+        "Email Support",
+        "Multi-format Export"
       ],
-      cta: "Try 14 days free",
+      cta: "Subscribe Now",
       popular: "Most Popular"
+    },
+    developer: {
+      name: "Developer",
+      price: "$199",
+      description: "Single developer license with advanced features",
+      features: [
+        "Unlimited Reports",
+        "100+ Templates",
+        "AI Design Assistant",
+        "Team Collaboration",
+        "ERP/CRM Integration",
+        "Priority 24/7 Support"
+      ],
+      cta: "Developer License"
     },
     enterprise: {
       name: "Enterprise",
-      price: "Custom",
-      description: "For large enterprises with special needs",
+      price: "$299",
+      description: "For organizations with comprehensive needs",
       features: [
-        "All Professional features",
-        "Unlimited storage",
-        "24/7 dedicated support",
-        "Custom training",
+        "All Developer Features",
+        "Dedicated 24/7 Support",
+        "Custom Training",
         "Guaranteed SLA",
-        "On-premise deployment",
-        "Full customization"
+        "On-premise Deployment",
+        "Full Customization"
       ],
-      cta: "Contact Us"
+      cta: "Contact Sales"
+    },
+    whiteLabel: {
+      name: "White Label",
+      price: "$5,000",
+      description: "For ISVs and technology partners",
+      features: [
+        "Full Rebranding Rights",
+        "Unlimited End Users",
+        "Source Code Access",
+        "Distribution Rights",
+        "Dedicated Support Manager",
+        "Complete API Integration"
+      ],
+      cta: "Partner Inquiry"
     }
   },
   community: {
-    title: "Join Our Community",
-    subtitle: "Connect with developers and experts from around the world",
+    title: "Partner Network & Community",
+    subtitle: "Join our network of developers and partners across the Gulf region and globally",
     discord: {
-      title: "Discord",
-      description: "Connect with the community in real-time",
-      members: "members+"
+      title: "Developer Community",
+      description: "Connect with APEX developers and share experiences",
+      members: "developers+"
     },
     forum: {
-      title: "Forum",
-      description: "Ask questions and share experiences",
-      topics: "topics+"
+      title: "Arabic Support",
+      description: "Specialized Arabic language support center 24/7",
+      topics: "queries+"
     },
     github: {
-      title: "GitHub",
-      description: "Contribute to project development",
-      stars: "stars+"
+      title: "Regional Partners",
+      description: "Certified Oracle partner network across the Gulf region",
+      stars: "partners+"
     }
   },
   footer: {
