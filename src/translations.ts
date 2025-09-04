@@ -89,13 +89,6 @@ export interface Translations {
       features: string[];
       cta: string;
     };
-    whiteLabel: {
-      name: string;
-      price: string;
-      description: string;
-      features: string[];
-      cta: string;
-    };
   };
   
   // Community Section
@@ -222,30 +215,30 @@ export const ar: Translations = {
   },
   hero: {
     title: "Apex ReportCraft (ARC)",
-    subtitle: "الحل الأول للتقارير في Oracle APEX",
-    description: "أنشئ تقارير احترافية وتفاعلية في دقائق مع ARC - الأداة الوحيدة المدمجة أصلياً في APEX مع دعم كامل للعربية ومساعد الذكاء الاصطناعي. من SQL إلى تقارير جميلة في دقائق، وليس ساعات.",
-    ctaPrimary: "ابدأ مجاناً",
-    ctaSecondary: "شاهد العرض التوضيحي",
+    subtitle: "🚀 ثورة في عالم تقارير Oracle APEX",
+    description: "💡 اكتشف قوة الذكاء الاصطناعي في إنشاء تقارير استثنائية! ARC يحول أفكارك إلى تقارير تفاعلية مذهلة في ثوانٍ معدودة. أول أداة عربية 100% مع تكامل APEX الأصلي - اجعل تقاريرك تتحدث العربية بطلاقة! ✨",
+    ctaPrimary: "🎯 ابدأ رحلتك المجانية",
+    ctaSecondary: "🎥 شاهد السحر يحدث",
     watchDemo: "مشاهدة العرض"
   },
   features: {
-    title: "لماذا Apex ReportCraft (ARC)؟",
-    subtitle: "الحل الوحيد للتقارير المتطورة في Oracle APEX - مصمم خصيصاً للمطورين والمؤسسات",
+    title: "✨ لماذا يختار 100,000+ مطور ARC؟",
+    subtitle: "🏆 الأداة الوحيدة التي تجمع بين قوة الذكاء الاصطناعي والعبقرية العربية - مصممة خصيصاً لتحقيق أحلام المطورين!",
     easyToUse: {
-      title: "تكامل APEX أصلي",
-      description: "لا حاجة لخوادم خارجية أو إعدادات معقدة. ARC يعمل بشكل كامل داخل قاعدة البيانات كحزمة PL/SQL أصلية"
+      title: "🔥 تكامل APEX سحري",
+      description: "انس الخوادم المعقدة والإعدادات المملة! ARC ينصب نفسه في ثوانٍ ويعمل كالسحر داخل قاعدة البيانات - بساطة لا تصدق!"
     },
     apexNative: {
-      title: "مساعد التصميم بالذكاء الاصطناعي",
-      description: "اقتراحات ذكية للتخطيط والتصور والتنسيق تحول إنشاء التقارير إلى تجربة بديهية"
+      title: "🤖 عبقرية الذكاء الاصطناعي",
+      description: "مساعدك الشخصي الذكي يقرأ أفكارك! يقترح عليك التصاميم المثالية ويحول بياناتك إلى لوحات فنية تخطف الأنظار"
     },
     quickLearning: {
-      title: "دعم العربية الكامل",
-      description: "دعم أصلي للغة العربية مع تخطيط من اليمين لليسار وقوالب محلية - الأول من نوعه في السوق"
+      title: "🌟 عربي أصيل 100%",
+      description: "أول أداة تقارير تتكلم العربية من القلب! تخطيط مثالي من اليمين لليسار، قوالب عربية فاخرة، وتجربة محلية استثنائية"
     },
     powerful: {
-      title: "منشئ السحب والإفلات",
-      description: "إنشاء تقارير معقدة بالسحب والإفلات في دقائق معدودة، مع معاينة فورية ومرونة كاملة"
+      title: "⚡ سحب وإفلات خارق",
+      description: "اسحب... أفلت... واو! تقارير معقدة تُنشأ في ثوانٍ، معاينة فورية مذهلة، ومرونة لا حدود لها - كأنك تلعب!"
     },
     flexible: {
       title: "التقارير الفرعية والمحورية",
@@ -316,20 +309,6 @@ export const ar: Translations = {
         "تخصيص كامل"
       ],
       cta: "تواصل معنا"
-    },
-    whiteLabel: {
-      name: "العلامة البيضاء",
-      price: "$5,000",
-      description: "لمقدمي البرمجيات والشركاء",
-      features: [
-        "إعادة العلامة التجارية الكاملة",
-        "مستخدمين نهائيين غير محدودين",
-        "وصول لكود المصدر",
-        "حقوق التوزيع",
-        "مدير دعم مخصص",
-        "تكامل API كامل"
-      ],
-      cta: "استفسار الشراكة"
     }
   },
   community: {
@@ -450,30 +429,30 @@ export const en: Translations = {
   },
   hero: {
     title: "Apex ReportCraft (ARC)",
-    subtitle: "The #1 Reporting Solution for Oracle APEX",
-    description: "Create professional, interactive reports in minutes with ARC - the only natively integrated APEX reporting tool with complete Arabic support and AI-powered design assistant. From SQL to beautiful reports in minutes, not hours.",
-    ctaPrimary: "Start Free",
-    ctaSecondary: "Watch Demo",
+    subtitle: "🚀 Revolution in Oracle APEX Reporting",
+    description: "💡 Discover the AI-powered magic that transforms data into stunning reports! ARC turns your wildest reporting dreams into reality in seconds. The world's first 100% Arabic-native APEX tool - where innovation meets tradition! ✨",
+    ctaPrimary: "🎯 Start Your Free Journey",
+    ctaSecondary: "🎥 See the Magic Happen",
     watchDemo: "Watch Demo"
   },
   features: {
-    title: "Why Apex ReportCraft (ARC)?",
-    subtitle: "The only advanced reporting solution for Oracle APEX - designed specifically for developers and enterprises",
+    title: "✨ Why 100,000+ Developers Choose ARC?",
+    subtitle: "🏆 The only tool that combines AI brilliance with cultural excellence - engineered to make developers' dreams come true!",
     easyToUse: {
-      title: "APEX-Native Integration",
-      description: "No external servers or complex setups required. ARC runs entirely within the database as a native PL/SQL package"
+      title: "🔥 Magical APEX Integration",
+      description: "Forget complex servers and boring setups! ARC installs in seconds and works like magic inside your database - simplicity beyond belief!"
     },
     apexNative: {
-      title: "AI Design Assistant",
-      description: "Smart recommendations for layouts, visualizations, and formatting that transform report creation into an intuitive experience"
+      title: "🤖 AI Genius at Work",
+      description: "Your personal AI assistant reads your mind! Suggests perfect designs and transforms your data into artistic masterpieces that steal the show"
     },
     quickLearning: {
-      title: "Complete Arabic Support",
-      description: "Native Arabic language support with right-to-left layouts and localized templates - first of its kind in the market"
+      title: "🌟 100% Authentic Arabic",
+      description: "The first reporting tool that speaks Arabic from the heart! Perfect RTL layouts, luxurious Arabic templates, and exceptional local experience"
     },
     powerful: {
-      title: "Drag-and-Drop Builder",
-      description: "Create complex reports with drag-and-drop in minutes, featuring live preview and complete flexibility"
+      title: "⚡ Super Drag & Drop",
+      description: "Drag... Drop... Wow! Complex reports created in seconds, stunning live previews, and limitless flexibility - it's like playing a game!"
     },
     flexible: {
       title: "Sub-Reports & Pivot Tables",
@@ -544,20 +523,6 @@ export const en: Translations = {
         "Full Customization"
       ],
       cta: "Contact Sales"
-    },
-    whiteLabel: {
-      name: "White Label",
-      price: "$5,000",
-      description: "For ISVs and technology partners",
-      features: [
-        "Full Rebranding Rights",
-        "Unlimited End Users",
-        "Source Code Access",
-        "Distribution Rights",
-        "Dedicated Support Manager",
-        "Complete API Integration"
-      ],
-      cta: "Partner Inquiry"
     }
   },
   community: {

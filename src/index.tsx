@@ -53,6 +53,27 @@ app.get('/about', (c) => {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>${t.about.title} - ${t.hero.title}</title>
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="${lang === 'ar' 
+          ? 'تعرف على فريق Apex ReportCraft - رواد تطوير أدوات التقارير بالذكاء الاصطناعي. مهمتنا جعل Oracle APEX أكثر قوة مع دعم العربية الكامل'
+          : 'Meet the Apex ReportCraft team - pioneers in AI-powered reporting tools. Our mission is making Oracle APEX more powerful with complete Arabic support'}">
+        <meta name="keywords" content="${lang === 'ar'
+          ? 'من نحن, فريق ARC, تاريخ الشركة, مهمة, رؤية, Oracle APEX, تقارير'
+          : 'about us, ARC team, company history, mission, vision, Oracle APEX, reports'}">
+        
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: '${t.about.title}',
+            page_location: window.location.href,
+            language: '${lang}'
+          });
+        </script>
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
         <script>
@@ -191,6 +212,24 @@ app.get('/vision', (c) => {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>${t.vision.title} - ${t.hero.title}</title>
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="${lang === 'ar'
+          ? 'رؤية وقيم Apex ReportCraft - نحو مستقبل أفضل لتقارير Oracle APEX. الابتكار والجودة والدعم والمجتمع في قلب كل ما نقوم به'
+          : 'Apex ReportCraft vision and values - towards a better future for Oracle APEX reporting. Innovation, quality, support, and community at the heart of everything we do'}">
+        
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: '${t.vision.title}',
+            page_location: window.location.href,
+            language: '${lang}'
+          });
+        </script>
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
         <script>
@@ -348,6 +387,33 @@ app.get('/contact', (c) => {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>${t.contact.title} - ${t.hero.title}</title>
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="${lang === 'ar'
+          ? 'تواصل مع فريق Apex ReportCraft - دعم 24/7، استشارات تقنية، ومساعدة في تطوير تقاريرك. نحن هنا لمساعدتك في كل خطوة'
+          : 'Contact Apex ReportCraft team - 24/7 support, technical consultations, and help developing your reports. We are here to help you every step of the way'}">
+        
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: '${t.contact.title}',
+            page_location: window.location.href,
+            language: '${lang}'
+          });
+          
+          // Track form submissions
+          function trackContactForm() {
+            gtag('event', 'form_submit', {
+              event_category: 'Contact',
+              event_label: 'contact_form',
+              language: '${lang}'
+            });
+          }
+        </script>
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
         <script>
@@ -527,6 +593,84 @@ app.get('/', (c) => {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>${t.hero.title} - ${t.hero.subtitle}</title>
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="${lang === 'ar' 
+          ? 'أول أداة تقارير Oracle APEX بالذكاء الاصطناعي مع دعم العربية الكامل. إنشاء تقارير مذهلة في دقائق مع مساعد AI ذكي وتكامل APEX أصلي. ابدأ مجاناً الآن!' 
+          : 'First AI-powered Oracle APEX reporting tool with complete Arabic support. Create stunning reports in minutes with smart AI assistant and native APEX integration. Start free now!'}">
+        <meta name="keywords" content="${lang === 'ar'
+          ? 'Oracle APEX, تقارير, ذكاء اصطناعي, عربي, ARC, برمجة, قواعد بيانات, تطوير, مجاني'
+          : 'Oracle APEX, reports, artificial intelligence, Arabic, ARC, programming, database, development, free'}">
+        <meta name="author" content="Apex ReportCraft Team">
+        <meta name="robots" content="index, follow">
+        <meta name="language" content="${lang === 'ar' ? 'Arabic' : 'English'}">
+        <meta name="revisit-after" content="7 days">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://apex-reportcraft.com/">
+        <meta property="og:title" content="${t.hero.title} - ${t.hero.subtitle}">
+        <meta property="og:description" content="${lang === 'ar'
+          ? 'ثورة في عالم تقارير Oracle APEX! اكتشف قوة الذكاء الاصطناعي مع دعم العربية الكامل'
+          : 'Revolution in Oracle APEX reporting! Discover AI-powered magic with complete Arabic support'}">
+        <meta property="og:image" content="https://apex-reportcraft.com/images/og-image.jpg">
+        <meta property="og:locale" content="${lang === 'ar' ? 'ar_SA' : 'en_US'}">
+        <meta property="og:site_name" content="Apex ReportCraft (ARC)">
+        
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://apex-reportcraft.com/">
+        <meta name="twitter:title" content="${t.hero.title} - ${t.hero.subtitle}">
+        <meta name="twitter:description" content="${lang === 'ar'
+          ? 'أول أداة تقارير Oracle APEX بالذكاء الاصطناعي مع دعم العربية الكامل'
+          : 'First AI-powered Oracle APEX reporting tool with complete Arabic support'}">
+        <meta name="twitter:image" content="https://apex-reportcraft.com/images/twitter-card.jpg">
+        <meta name="twitter:site" content="@apex_reportcraft">
+        <meta name="twitter:creator" content="@apex_reportcraft">
+        
+        <!-- Additional SEO -->
+        <link rel="canonical" href="https://apex-reportcraft.com/${lang !== 'en' ? '?lang=' + lang : ''}">
+        <link rel="alternate" hreflang="ar" href="https://apex-reportcraft.com/?lang=ar">
+        <link rel="alternate" hreflang="en" href="https://apex-reportcraft.com/?lang=en">
+        <link rel="alternate" hreflang="x-default" href="https://apex-reportcraft.com/">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: '${t.hero.title}',
+            page_location: window.location.href,
+            language: '${lang}',
+            custom_map: {'custom_parameter_1': 'user_language'}
+          });
+          
+          // Track chatbot usage
+          function trackChatbot(action, label) {
+            gtag('event', action, {
+              event_category: 'Chatbot',
+              event_label: label,
+              language: '${lang}'
+            });
+          }
+          
+          // Track pricing clicks
+          function trackPricing(plan) {
+            gtag('event', 'pricing_click', {
+              event_category: 'Pricing',
+              event_label: plan,
+              language: '${lang}'
+            });
+          }
+        </script>
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
         <script>
@@ -612,16 +756,26 @@ app.get('/', (c) => {
 
         <!-- Hero Section -->
         <section id="home" class="relative overflow-hidden">
-            <div class="gradient-bg">
+            <!-- Animated Background -->
+            <div class="absolute inset-0 gradient-animated opacity-90"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+            
+            <div class="relative z-10">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                     <div class="text-center">
-                        <div class="float-animation mb-8">
-                            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
-                                <div class="w-16 h-16 relative">
-                                    <div class="absolute w-10 h-10 bg-arc-orange rounded-full"></div>
-                                    <div class="absolute top-1 ${isRTL ? 'left-5' : 'right-5'} w-5 h-5 bg-arc-green rounded-full"></div>
+                        <!-- Enhanced Logo Animation -->
+                        <div class="float-animation mb-8 relative">
+                            <div class="w-32 h-32 bg-gradient-to-r from-white to-gray-100 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl border-4 border-white/30 backdrop-blur-sm">
+                                <div class="w-20 h-20 relative">
+                                    <div class="absolute w-12 h-12 bg-gradient-to-r from-arc-orange to-red-500 rounded-full animate-pulse shadow-lg"></div>
+                                    <div class="absolute top-2 ${isRTL ? 'left-6' : 'right-6'} w-6 h-6 bg-gradient-to-r from-arc-green to-emerald-500 rounded-full pulse-glow shadow-lg"></div>
+                                    <div class="absolute top-0 ${isRTL ? 'left-0' : 'right-0'} w-3 h-3 bg-arc-blue rounded-full animate-bounce"></div>
                                 </div>
                             </div>
+                            <!-- Floating particles -->
+                            <div class="absolute top-0 left-1/4 w-2 h-2 bg-white/60 rounded-full animate-ping"></div>
+                            <div class="absolute top-8 right-1/4 w-1 h-1 bg-white/40 rounded-full animate-pulse"></div>
+                            <div class="absolute bottom-4 left-1/3 w-1.5 h-1.5 bg-white/50 rounded-full animate-bounce"></div>
                         </div>
                         
                         <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
@@ -634,15 +788,46 @@ app.get('/', (c) => {
                             ${t.hero.description}
                         </p>
                         
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <a href="https://app.apex-reportcraft.com/signup" target="_blank" class="bg-white text-arc-blue px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
-                                <i class="fas fa-rocket ${isRTL ? 'ml-2' : 'mr-2'}"></i>
-                                ${t.hero.ctaPrimary}
+                        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                            <!-- Primary CTA with advanced styling -->
+                            <a href="https://app.apex-reportcraft.com/signup" target="_blank" class="group relative bg-white text-arc-blue px-10 py-5 rounded-2xl font-bold hover:bg-gray-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105 hover:-rotate-1">
+                                <div class="absolute inset-0 bg-gradient-to-r from-arc-blue/10 to-arc-orange/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div class="relative flex items-center">
+                                    <div class="w-8 h-8 bg-gradient-to-r from-arc-blue to-arc-orange rounded-full flex items-center justify-center ${isRTL ? 'ml-3' : 'mr-3'} group-hover:animate-spin">
+                                        <i class="fas fa-rocket text-white text-sm"></i>
+                                    </div>
+                                    <span class="text-lg gradient-text-hover">${t.hero.ctaPrimary}</span>
+                                </div>
+                                <div class="absolute -top-1 -right-1 w-6 h-6 bg-arc-orange rounded-full flex items-center justify-center animate-pulse">
+                                    <span class="text-white text-xs font-bold">!</span>
+                                </div>
                             </a>
-                            <a href="https://demo.apex-reportcraft.com" target="_blank" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-arc-blue transition-colors">
-                                <i class="fas fa-play ${isRTL ? 'ml-2' : 'mr-2'}"></i>
-                                ${t.hero.ctaSecondary}
+                            
+                            <!-- Secondary CTA with glass effect -->
+                            <a href="https://demo.apex-reportcraft.com" target="_blank" class="group relative glass-effect border-2 border-white/30 text-white px-10 py-5 rounded-2xl font-bold hover:bg-white/20 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 hover:rotate-1">
+                                <div class="relative flex items-center">
+                                    <div class="w-8 h-8 border-2 border-white/50 rounded-full flex items-center justify-center ${isRTL ? 'ml-3' : 'mr-3'} group-hover:border-white transition-colors">
+                                        <i class="fas fa-play text-sm group-hover:animate-pulse"></i>
+                                    </div>
+                                    <span class="text-lg">${t.hero.ctaSecondary}</span>
+                                </div>
                             </a>
+                        </div>
+                        
+                        <!-- Trust indicators -->
+                        <div class="mt-12 flex items-center justify-center space-x-8 ${isRTL ? 'space-x-reverse' : ''} opacity-80">
+                            <div class="flex items-center text-white/90">
+                                <i class="fas fa-users ${isRTL ? 'ml-2' : 'mr-2'} text-arc-green"></i>
+                                <span class="font-semibold">100K+ ${lang === 'ar' ? 'مطور' : 'Developers'}</span>
+                            </div>
+                            <div class="flex items-center text-white/90">
+                                <i class="fas fa-star ${isRTL ? 'ml-2' : 'mr-2'} text-yellow-400"></i>
+                                <span class="font-semibold">4.9/5 ${lang === 'ar' ? 'تقييم' : 'Rating'}</span>
+                            </div>
+                            <div class="flex items-center text-white/90">
+                                <i class="fas fa-shield-alt ${isRTL ? 'ml-2' : 'mr-2'} text-arc-blue"></i>
+                                <span class="font-semibold">${lang === 'ar' ? 'آمن 100%' : '100% Secure'}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -662,52 +847,106 @@ app.get('/', (c) => {
                 </div>
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 bg-arc-blue rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-mouse-pointer text-white text-xl"></i>
+                    <!-- Feature Card 1 - Enhanced -->
+                    <div class="group relative bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl hover:shadow-2xl transition-all duration-500 border border-blue-100 hover:border-arc-blue transform hover:scale-105 hover:-rotate-1">
+                        <div class="absolute inset-0 bg-gradient-to-br from-arc-blue/5 to-arc-orange/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-r from-arc-blue to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:animate-pulse shadow-lg">
+                                <i class="fas fa-magic text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-arc-gray mb-4 group-hover:text-arc-blue transition-colors">${t.features.easyToUse.title}</h3>
+                            <p class="text-gray-600 leading-relaxed group-hover:text-gray-700">${t.features.easyToUse.description}</p>
+                            <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-8 h-8 bg-arc-blue/20 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-arrow-right text-arc-blue text-sm"></i>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-arc-gray mb-3">${t.features.easyToUse.title}</h3>
-                        <p class="text-gray-600">${t.features.easyToUse.description}</p>
                     </div>
                     
-                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 bg-arc-orange rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-code text-white text-xl"></i>
+                    <!-- Feature Card 2 -->
+                    <div class="group relative bg-gradient-to-br from-white to-orange-50 p-8 rounded-2xl hover:shadow-2xl transition-all duration-500 border border-orange-100 hover:border-arc-orange transform hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-br from-arc-orange/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-r from-arc-orange to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:animate-bounce shadow-lg">
+                                <i class="fas fa-brain text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-arc-gray mb-4 group-hover:text-arc-orange transition-colors">${t.features.apexNative.title}</h3>
+                            <p class="text-gray-600 leading-relaxed group-hover:text-gray-700">${t.features.apexNative.description}</p>
+                            <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-8 h-8 bg-arc-orange/20 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-lightbulb text-arc-orange text-sm"></i>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-arc-gray mb-3">${t.features.apexNative.title}</h3>
-                        <p class="text-gray-600">${t.features.apexNative.description}</p>
                     </div>
                     
-                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 bg-arc-green rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-graduation-cap text-white text-xl"></i>
+                    <!-- Feature Card 3 -->
+                    <div class="group relative bg-gradient-to-br from-white to-green-50 p-8 rounded-2xl hover:shadow-2xl transition-all duration-500 border border-green-100 hover:border-arc-green transform hover:scale-105 hover:rotate-1">
+                        <div class="absolute inset-0 bg-gradient-to-br from-arc-green/5 to-emerald-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-r from-arc-green to-emerald-500 rounded-2xl flex items-center justify-center mb-6 group-hover:animate-pulse shadow-lg">
+                                <i class="fas fa-globe text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-arc-gray mb-4 group-hover:text-arc-green transition-colors">${t.features.quickLearning.title}</h3>
+                            <p class="text-gray-600 leading-relaxed group-hover:text-gray-700">${t.features.quickLearning.description}</p>
+                            <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-8 h-8 bg-arc-green/20 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-check text-arc-green text-sm"></i>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-arc-gray mb-3">${t.features.quickLearning.title}</h3>
-                        <p class="text-gray-600">${t.features.quickLearning.description}</p>
                     </div>
                     
-                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 bg-arc-blue rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-bolt text-white text-xl"></i>
+                    <!-- Feature Card 4 -->
+                    <div class="group relative bg-gradient-to-br from-white to-purple-50 p-8 rounded-2xl hover:shadow-2xl transition-all duration-500 border border-purple-100 hover:border-purple-500 transform hover:scale-105 hover:-rotate-1">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-indigo-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 group-hover:animate-spin shadow-lg">
+                                <i class="fas fa-mouse-pointer text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-arc-gray mb-4 group-hover:text-purple-600 transition-colors">${t.features.powerful.title}</h3>
+                            <p class="text-gray-600 leading-relaxed group-hover:text-gray-700">${t.features.powerful.description}</p>
+                            <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-bolt text-purple-500 text-sm"></i>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-arc-gray mb-3">${t.features.powerful.title}</h3>
-                        <p class="text-gray-600">${t.features.powerful.description}</p>
                     </div>
                     
-                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 bg-arc-orange rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-cogs text-white text-xl"></i>
+                    <!-- Feature Card 5 -->
+                    <div class="group relative bg-gradient-to-br from-white to-cyan-50 p-8 rounded-2xl hover:shadow-2xl transition-all duration-500 border border-cyan-100 hover:border-cyan-500 transform hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:animate-bounce shadow-lg">
+                                <i class="fas fa-cogs text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-arc-gray mb-4 group-hover:text-cyan-600 transition-colors">${t.features.flexible.title}</h3>
+                            <p class="text-gray-600 leading-relaxed group-hover:text-gray-700">${t.features.flexible.description}</p>
+                            <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-8 h-8 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-expand text-cyan-500 text-sm"></i>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-arc-gray mb-3">${t.features.flexible.title}</h3>
-                        <p class="text-gray-600">${t.features.flexible.description}</p>
                     </div>
                     
-                    <div class="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 bg-arc-green rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                    <!-- Feature Card 6 -->
+                    <div class="group relative bg-gradient-to-br from-white to-emerald-50 p-8 rounded-2xl hover:shadow-2xl transition-all duration-500 border border-emerald-100 hover:border-emerald-500 transform hover:scale-105 hover:rotate-1">
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-green-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative">
+                            <div class="w-16 h-16 bg-gradient-to-r from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:animate-pulse shadow-lg">
+                                <i class="fas fa-shield-alt text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-arc-gray mb-4 group-hover:text-emerald-600 transition-colors">${t.features.secure.title}</h3>
+                            <p class="text-gray-600 leading-relaxed group-hover:text-gray-700">${t.features.secure.description}</p>
+                            <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <div class="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-lock text-emerald-500 text-sm"></i>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold text-arc-gray mb-3">${t.features.secure.title}</h3>
-                        <p class="text-gray-600">${t.features.secure.description}</p>
                     </div>
                 </div>
             </div>
@@ -730,7 +969,7 @@ app.get('/', (c) => {
                     </div>
                 </div>
                 
-                <div class="grid lg:grid-cols-5 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     <!-- Free Plan -->
                     <div class="bg-white rounded-xl p-6 shadow-lg">
                         <h3 class="text-lg font-semibold text-arc-gray mb-2">${t.pricing.free.name}</h3>
@@ -814,26 +1053,7 @@ app.get('/', (c) => {
                             ${t.pricing.enterprise.cta}
                         </a>
                     </div>
-                    
-                    <!-- White Label Plan -->
-                    <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 shadow-lg border border-purple-200">
-                        <h3 class="text-lg font-semibold text-purple-800 mb-2">${t.pricing.whiteLabel.name}</h3>
-                        <div class="text-3xl font-bold text-purple-600 mb-2">${t.pricing.whiteLabel.price}<span class="text-sm text-gray-500"> ${lang === 'ar' ? 'سنوياً' : '/year'}</span></div>
-                        <p class="text-gray-600 mb-4 text-sm">${t.pricing.whiteLabel.description}</p>
-                        
-                        <ul class="space-y-2 mb-6">
-                            ${t.pricing.whiteLabel.features.map(feature => `
-                                <li class="flex items-center">
-                                    <i class="fas fa-star text-purple-500 ${isRTL ? 'ml-2' : 'mr-2'} text-sm"></i>
-                                    <span class="text-gray-600 text-sm">${feature}</span>
-                                </li>
-                            `).join('')}
-                        </ul>
-                        
-                        <a href="https://app.apex-reportcraft.com/contact/white-label" target="_blank" class="w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center block text-sm">
-                            ${t.pricing.whiteLabel.cta}
-                        </a>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -994,36 +1214,54 @@ app.get('/', (c) => {
                 <div id="chat-messages" class="h-80 p-4 overflow-y-auto bg-gray-50">
                     <!-- Welcome Message -->
                     <div class="flex items-start space-x-2 ${isRTL ? 'space-x-reverse' : ''} mb-4">
-                        <div class="w-8 h-8 bg-arc-blue rounded-full flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-robot text-white text-xs"></i>
+                        <div class="w-8 h-8 bg-gradient-to-r from-arc-blue to-arc-orange rounded-full flex items-center justify-center flex-shrink-0 animate-pulse">
+                            <i class="fas fa-brain text-white text-xs"></i>
                         </div>
-                        <div class="bg-white rounded-2xl rounded-tl-sm p-3 shadow-sm max-w-xs">
-                            <p class="text-sm text-gray-800">
+                        <div class="bg-gradient-to-r from-blue-50 to-orange-50 border border-blue-200 rounded-2xl rounded-tl-sm p-4 shadow-md max-w-xs">
+                            <div class="flex items-center mb-2">
+                                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse ${isRTL ? 'ml-2' : 'mr-2'}"></div>
+                                <span class="text-xs text-gray-500 font-medium">${lang === 'ar' ? 'متصل الآن' : 'Online Now'}</span>
+                            </div>
+                            <p class="text-sm text-gray-800 font-medium">
                                 ${lang === 'ar' 
-                                    ? 'مرحباً! أنا مساعد ARC الذكي. كيف يمكنني مساعدتك اليوم؟' 
-                                    : 'Hello! I\'m the ARC Smart Assistant. How can I help you today?'
+                                    ? '🤖 مرحباً! أنا الخبير التقني الذكي في ARC. أستطيع مساعدتك في كل شيء من الإعداد إلى حل المشاكل المعقدة!' 
+                                    : '🤖 Hello! I\'m ARC\'s Smart Technical Expert. I can help you with everything from setup to solving complex issues!'
                                 }
                             </p>
                         </div>
                     </div>
                     
-                    <!-- Quick Action Buttons -->
-                    <div class="space-y-2 mb-4">
-                        <button class="chat-quick-btn w-full text-${isRTL ? 'right' : 'left'} bg-white hover:bg-arc-blue hover:text-white transition-colors p-3 rounded-lg shadow-sm text-sm border border-gray-200">
-                            <i class="fas fa-question-circle ${isRTL ? 'ml-2' : 'mr-2'} text-arc-blue"></i>
-                            ${lang === 'ar' ? 'كيف أبدأ مع ARC؟' : 'How do I get started with ARC?'}
+                    <!-- Advanced Quick Action Buttons -->
+                    <div class="space-y-3 mb-4">
+                        <div class="grid grid-cols-2 gap-2">
+                            <button class="chat-quick-btn group text-center bg-gradient-to-r from-blue-50 to-blue-100 hover:from-arc-blue hover:to-blue-600 hover:text-white transition-all duration-300 p-3 rounded-xl shadow-sm text-xs border border-blue-200 transform hover:scale-105">
+                                <i class="fas fa-rocket text-arc-blue group-hover:text-white text-lg mb-1 block"></i>
+                                <span class="font-semibold">${lang === 'ar' ? 'بدء سريع' : 'Quick Start'}</span>
+                            </button>
+                            <button class="chat-quick-btn group text-center bg-gradient-to-r from-green-50 to-green-100 hover:from-arc-green hover:to-green-600 hover:text-white transition-all duration-300 p-3 rounded-xl shadow-sm text-xs border border-green-200 transform hover:scale-105">
+                                <i class="fas fa-dollar-sign text-arc-green group-hover:text-white text-lg mb-1 block"></i>
+                                <span class="font-semibold">${lang === 'ar' ? 'الأسعار' : 'Pricing'}</span>
+                            </button>
+                        </div>
+                        
+                        <button class="chat-quick-btn w-full text-${isRTL ? 'right' : 'left'} bg-gradient-to-r from-orange-50 to-red-50 hover:from-arc-orange hover:to-red-500 hover:text-white transition-all duration-300 p-3 rounded-xl shadow-sm text-sm border border-orange-200 transform hover:scale-105">
+                            <i class="fas fa-tools ${isRTL ? 'ml-2' : 'mr-2'} text-arc-orange group-hover:text-white"></i>
+                            <span class="font-semibold">${lang === 'ar' ? '🔧 حل المشاكل التقنية' : '🔧 Technical Troubleshooting'}</span>
                         </button>
-                        <button class="chat-quick-btn w-full text-${isRTL ? 'right' : 'left'} bg-white hover:bg-arc-blue hover:text-white transition-colors p-3 rounded-lg shadow-sm text-sm border border-gray-200">
-                            <i class="fas fa-dollar-sign ${isRTL ? 'ml-2' : 'mr-2'} text-arc-green"></i>
-                            ${lang === 'ar' ? 'معلومات عن الأسعار' : 'Pricing information'}
+                        
+                        <button class="chat-quick-btn w-full text-${isRTL ? 'right' : 'left'} bg-gradient-to-r from-purple-50 to-pink-50 hover:from-purple-500 hover:to-pink-500 hover:text-white transition-all duration-300 p-3 rounded-xl shadow-sm text-sm border border-purple-200 transform hover:scale-105">
+                            <i class="fas fa-database ${isRTL ? 'ml-2' : 'mr-2'} text-purple-600"></i>
+                            <span class="font-semibold">${lang === 'ar' ? '🗄️ تكامل قواعد البيانات' : '🗄️ Database Integration'}</span>
                         </button>
-                        <button class="chat-quick-btn w-full text-${isRTL ? 'right' : 'left'} bg-white hover:bg-arc-blue hover:text-white transition-colors p-3 rounded-lg shadow-sm text-sm border border-gray-200">
-                            <i class="fas fa-cog ${isRTL ? 'ml-2' : 'mr-2'} text-arc-orange"></i>
-                            ${lang === 'ar' ? 'المساعدة التقنية' : 'Technical support'}
+                        
+                        <button class="chat-quick-btn w-full text-${isRTL ? 'right' : 'left'} bg-gradient-to-r from-indigo-50 to-blue-50 hover:from-indigo-500 hover:to-blue-500 hover:text-white transition-all duration-300 p-3 rounded-xl shadow-sm text-sm border border-indigo-200 transform hover:scale-105">
+                            <i class="fas fa-magic ${isRTL ? 'ml-2' : 'mr-2'} text-indigo-600"></i>
+                            <span class="font-semibold">${lang === 'ar' ? '✨ ميزات الذكاء الاصطناعي' : '✨ AI Features Guide'}</span>
                         </button>
-                        <button class="chat-quick-btn w-full text-${isRTL ? 'right' : 'left'} bg-white hover:bg-arc-blue hover:text-white transition-colors p-3 rounded-lg shadow-sm text-sm border border-gray-200">
-                            <i class="fas fa-book ${isRTL ? 'ml-2' : 'mr-2'} text-purple-600"></i>
-                            ${lang === 'ar' ? 'الوثائق والدروس' : 'Documentation & tutorials'}
+                        
+                        <button class="chat-quick-btn w-full text-${isRTL ? 'right' : 'left'} bg-gradient-to-r from-teal-50 to-green-50 hover:from-teal-500 hover:to-green-500 hover:text-white transition-all duration-300 p-3 rounded-xl shadow-sm text-sm border border-teal-200 transform hover:scale-105">
+                            <i class="fas fa-code ${isRTL ? 'ml-2' : 'mr-2'} text-teal-600"></i>
+                            <span class="font-semibold">${lang === 'ar' ? '👨‍💻 أمثلة الكود والAPI' : '👨‍💻 Code Examples & API'}</span>
                         </button>
                     </div>
                 </div>

@@ -215,49 +215,87 @@ document.addEventListener('DOMContentLoaded', function() {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
-    // Get bot response
+    // Advanced AI-powered bot response system
     function getBotResponse(message) {
         const lang = getCurrentLanguage();
         const lowerMessage = message.toLowerCase();
         
-        // Arabic responses
+        // Arabic responses with advanced technical support
         if (lang === 'ar') {
+            // Pricing queries
             if (lowerMessage.includes('سعر') || lowerMessage.includes('أسعار') || lowerMessage.includes('تكلفة')) {
-                return 'نقدم عدة خطط تسعير مناسبة لجميع الاحتياجات:\n• المجانية: 0$ إلى الأبد\n• المحترفة: 29$ شهرياً\n• المطور: 59$ شهرياً\n• المؤسسات: 149$ شهرياً\n• العلامة البيضاء: 2,999$ سنوياً\n\nيمكنك مراجعة تفاصيل أكثر في قسم الأسعار أعلاه.';
+                return '💰 **خطط الأسعار الذكية لـ ARC:**\n\n🆓 **المجانية**: 0$ - مثالية للبداية!\n• 5 تقارير شهرياً\n• دعم المجتمع\n• قوالب أساسية\n\n⭐ **المحترفة**: 29$/شهر - الأكثر شيوعاً!\n• تقارير غير محدودة\n• مساعد AI متقدم\n• تصدير بجودة عالية\n\n🚀 **المطور**: 59$/شهر - للمحترفين!\n• API كاملة\n• تخصيص متقدم\n• أولوية في الدعم\n\n🏢 **المؤسسات**: 149$/شهر\n• مستخدمين غير محدودين\n• دعم 24/7\n• تدريب مخصص\n\n💡 **نصيحة**: ابدأ مجاناً واترقِ حسب احتياجاتك!';
             }
-            if (lowerMessage.includes('بداية') || lowerMessage.includes('أبدأ') || lowerMessage.includes('كيف')) {
-                return 'للبداية مع ARC:\n1. اشترك في الخطة المجانية\n2. حمل الأداة وثبتها في مشروع APEX\n3. اتبع الدليل المرفق\n4. ابدأ في إنشاء تقاريرك الأولى\n\nالعملية بسيطة جداً وتستغرق أقل من 10 دقائق!';
+            
+            // Quick start queries
+            if (lowerMessage.includes('بداية') || lowerMessage.includes('أبدأ') || lowerMessage.includes('بدء سريع')) {
+                return '🚀 **البدء السريع مع ARC - دليل خطوة بخطوة:**\n\n**الخطوة 1**: التسجيل (دقيقتان)\n• زيارة app.apex-reportcraft.com\n• إنشاء حساب مجاني\n• تفعيل البريد الإلكتروني\n\n**الخطوة 2**: التحميل والتثبيت (5 دقائق)\n• تحميل ARC Package\n• استيراد في APEX Workspace\n• تشغيل سكريبت الإعداد\n\n**الخطوة 3**: أول تقرير! (3 دقائق)\n• اختيار قالب\n• ربط مصدر البيانات\n• تخصيص التصميم\n• معاينة والنشر!\n\n✅ **النتيجة**: تقريرك الأول جاهز في أقل من 10 دقائق!';
             }
-            if (lowerMessage.includes('دعم') || lowerMessage.includes('مساعدة') || lowerMessage.includes('تقني')) {
-                return 'نقدم دعماً تقنياً شاملاً:\n• دعم مباشر عبر الدردشة (24/7)\n• منتدى مجتمع المطورين\n• وثائق شاملة بالعربية\n• دروس فيديو تفاعلية\n• دعم عبر البريد الإلكتروني\n\nفريقنا جاهز لمساعدتك في أي وقت!';
+            
+            // Technical troubleshooting
+            if (lowerMessage.includes('مشكلة') || lowerMessage.includes('خطأ') || lowerMessage.includes('تقني') || lowerMessage.includes('حل المشاكل')) {
+                return '🔧 **حلول المشاكل التقنية الشائعة:**\n\n**مشكلة التثبيت:**\n• تأكد من صلاحيات APEX Admin\n• تحقق من إصدار Oracle (11g+)\n• راجع ملف التسجيل للأخطاء\n\n**مشاكل الأداء:**\n• زيادة APEX Memory Pool\n• فهرسة الجداول المستخدمة\n• تحسين استعلامات SQL\n\n**مشاكل التصدير:**\n• تحقق من مساحة Temp\n• ضبط إعدادات PDF\n• فحص الخطوط المستخدمة\n\n**مشاكل العربية:**\n• ضبط Character Set: AL32UTF8\n• تفعيل RTL Support\n• اختبار الخطوط العربية\n\n🆘 **تحتاج مساعدة فورية؟** اكتب "دعم عاجل" وسأوصلك بخبير تقني!';
             }
-            if (lowerMessage.includes('وثائق') || lowerMessage.includes('دليل') || lowerMessage.includes('تعليم')) {
-                return 'تتوفر وثائق شاملة باللغة العربية:\n• دليل التركيب والإعداد\n• أمثلة عملية متقدمة\n• شرح جميع الميزات\n• نصائح وحيل للمحترفين\n• قوالب جاهزة للاستخدام\n\nكل شيء موثق بدقة لضمان تجربة ممتازة.';
+            
+            // Database integration
+            if (lowerMessage.includes('قاعدة بيانات') || lowerMessage.includes('تكامل') || lowerMessage.includes('ربط')) {
+                return '🗄️ **تكامل قواعد البيانات مع ARC:**\n\n**قواعد البيانات المدعومة:**\n✅ Oracle Database (الأمثل)\n✅ MySQL/MariaDB\n✅ PostgreSQL\n✅ SQL Server\n✅ REST APIs\n\n**طرق الربط:**\n1️⃣ **Native APEX**: ربط مباشر مع الجداول\n2️⃣ **Database Links**: للقواعد الخارجية\n3️⃣ **REST Data Sources**: للخدمات الخارجية\n4️⃣ **File Upload**: استيراد Excel/CSV\n\n**أفضل الممارسات:**\n• استخدام Views للأمان\n• إنشاء Indexes للسرعة\n• تطبيق Data Validation\n• النسخ الاحتياطي المنتظم\n\n🎯 **نصيحة خبير**: ابدأ بـ Native APEX للأداء الأمثل!';
             }
-            return 'شكراً لتواصلك معنا! يمكنني مساعدتك في:\n• معلومات الأسعار والخطط\n• كيفية البدء مع ARC\n• الدعم التقني\n• الوثائق والتعليم\n\nما الذي تود معرفته؟';
+            
+            // AI features
+            if (lowerMessage.includes('ذكاء') || lowerMessage.includes('ai') || lowerMessage.includes('اصطناعي')) {
+                return '🤖 **ميزات الذكاء الاصطناعي في ARC:**\n\n**المساعد الذكي للتصميم:**\n• اقتراح تخطيط مثالي للتقرير\n• اختيار الألوان المناسبة\n• تحسين ترتيب العناصر\n\n**التحليل التلقائي:**\n• اكتشاف الأنماط في البيانات\n• اقتراح المخططات المناسبة\n• تحديد البيانات الشاذة\n\n**التحسين الذكي:**\n• تحسين استعلامات SQL\n• ضغط حجم التقارير\n• تسريع وقت التحميل\n\n**الترجمة الذكية:**\n• ترجمة التقارير تلقائياً\n• تكييف التخطيط للغات RTL\n• تحسين الخطوط العربية\n\n✨ **قريباً**: مولد التقارير بالأوامر الصوتية!';
+            }
+            
+            // Code examples and API
+            if (lowerMessage.includes('كود') || lowerMessage.includes('api') || lowerMessage.includes('برمجة') || lowerMessage.includes('أمثلة')) {
+                return '👨‍💻 **أمثلة الكود والAPI:**\n\n**إنشاء تقرير بـ PL/SQL:**\n```sql\nBEGIN\n  ARC_REPORTS.create_report(\n    p_name => \'تقرير المبيعات\',\n    p_query => \'SELECT * FROM sales\',\n    p_template => \'modern_arabic\'\n  );\nEND;\n```\n\n**تصدير عبر API:**\n```javascript\nfetch(\'/apex/arc/export\', {\n  method: \'POST\',\n  body: JSON.stringify({\n    reportId: 123,\n    format: \'pdf\',\n    locale: \'ar\'\n  })\n})\n```\n\n**ربط مع JavaScript:**\n```javascript\nARC.render({\n  container: \'#report\',\n  data: salesData,\n  theme: \'arabic-rtl\'\n});\n```\n\n📚 **مزيد من الأمثلة**: docs.apex-reportcraft.com/examples';
+            }
+            
+            return '🤖 **أهلاً بك! أنا الخبير التقني الذكي لـ ARC**\n\nيمكنني مساعدتك في:\n🚀 **البدء السريع** - دليل التثبيت خطوة بخطوة\n💰 **خطط الأسعار** - اختيار الباقة المناسبة\n🔧 **حل المشاكل التقنية** - دعم فني متخصص\n🗄️ **تكامل قواعد البيانات** - ربط مصادر البيانات\n✨ **ميزات الذكاء الاصطناعي** - استخدام AI\n👨‍💻 **أمثلة الكود** - كود جاهز وAPI\n\n**اكتب سؤالك أو اختر من الأزرار أعلاه! 🎯**';
         }
         
-        // English responses
+        // English responses with advanced technical support
         if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('pricing')) {
-            return 'We offer flexible pricing plans for every need:\n• Free: $0 forever\n• Pro: $29/month\n• Developer: $59/month\n• Enterprise: $149/month\n• White Label: $2,999/year\n\nCheck out the pricing section above for full details!';
-        }
-        if (lowerMessage.includes('start') || lowerMessage.includes('begin') || lowerMessage.includes('get started')) {
-            return 'Getting started with ARC is easy:\n1. Sign up for a free account\n2. Download and install the plugin in your APEX project\n3. Follow the quick setup guide\n4. Start creating your first reports\n\nIt takes less than 10 minutes to get up and running!';
-        }
-        if (lowerMessage.includes('support') || lowerMessage.includes('help') || lowerMessage.includes('technical')) {
-            return 'We provide comprehensive support:\n• 24/7 live chat support\n• Active developer community forum\n• Complete documentation\n• Video tutorials\n• Email support\n\nOur team is ready to help you succeed!';
-        }
-        if (lowerMessage.includes('documentation') || lowerMessage.includes('docs') || lowerMessage.includes('tutorial')) {
-            return 'Comprehensive documentation is available:\n• Installation & setup guides\n• Advanced examples & use cases\n• Complete feature reference\n• Best practices & tips\n• Ready-to-use templates\n\nEverything you need to master ARC!';
+            return '💰 **Smart Pricing Plans for ARC:**\n\n🆓 **Free**: $0 - Perfect to start!\n• 5 reports/month\n• Community support\n• Basic templates\n\n⭐ **Pro**: $29/month - Most popular!\n• Unlimited reports\n• Advanced AI assistant\n• High-quality export\n\n🚀 **Developer**: $59/month - For professionals!\n• Full API access\n• Advanced customization\n• Priority support\n\n🏢 **Enterprise**: $149/month\n• Unlimited users\n• 24/7 support\n• Custom training\n\n💡 **Tip**: Start free and upgrade as needed!';
         }
         
-        return 'Thank you for reaching out! I can help you with:\n• Pricing and plans information\n• Getting started with ARC\n• Technical support\n• Documentation and tutorials\n\nWhat would you like to know?';
+        if (lowerMessage.includes('start') || lowerMessage.includes('begin') || lowerMessage.includes('quick start')) {
+            return '🚀 **Quick Start with ARC - Step by Step:**\n\n**Step 1**: Sign Up (2 minutes)\n• Visit app.apex-reportcraft.com\n• Create free account\n• Verify email\n\n**Step 2**: Download & Install (5 minutes)\n• Download ARC Package\n• Import to APEX Workspace\n• Run setup script\n\n**Step 3**: First Report! (3 minutes)\n• Choose template\n• Connect data source\n• Customize design\n• Preview & publish!\n\n✅ **Result**: Your first report ready in under 10 minutes!';
+        }
+        
+        if (lowerMessage.includes('troubleshoot') || lowerMessage.includes('error') || lowerMessage.includes('problem') || lowerMessage.includes('technical') || lowerMessage.includes('issue')) {
+            return '🔧 **Technical Troubleshooting Guide:**\n\n**Installation Issues:**\n• Ensure APEX Admin privileges\n• Check Oracle version (11g+)\n• Review installation logs\n\n**Performance Problems:**\n• Increase APEX Memory Pool\n• Index used tables\n• Optimize SQL queries\n\n**Export Issues:**\n• Check Temp space\n• Configure PDF settings\n• Verify font availability\n\n**Arabic Issues:**\n• Set Character Set: AL32UTF8\n• Enable RTL Support\n• Test Arabic fonts\n\n🆘 **Need immediate help?** Type "urgent support" and I\'ll connect you with a technical expert!';
+        }
+        
+        if (lowerMessage.includes('database') || lowerMessage.includes('integration') || lowerMessage.includes('connect')) {
+            return '🗄️ **Database Integration with ARC:**\n\n**Supported Databases:**\n✅ Oracle Database (Optimal)\n✅ MySQL/MariaDB\n✅ PostgreSQL\n✅ SQL Server\n✅ REST APIs\n\n**Connection Methods:**\n1️⃣ **Native APEX**: Direct table connection\n2️⃣ **Database Links**: External databases\n3️⃣ **REST Data Sources**: External services\n4️⃣ **File Upload**: Excel/CSV import\n\n**Best Practices:**\n• Use Views for security\n• Create Indexes for speed\n• Apply Data Validation\n• Regular backups\n\n🎯 **Expert Tip**: Start with Native APEX for optimal performance!';
+        }
+        
+        if (lowerMessage.includes('ai') || lowerMessage.includes('artificial') || lowerMessage.includes('intelligent')) {
+            return '🤖 **AI Features in ARC:**\n\n**Smart Design Assistant:**\n• Suggest optimal report layout\n• Choose appropriate colors\n• Optimize element arrangement\n\n**Auto Analysis:**\n• Discover data patterns\n• Suggest suitable charts\n• Identify outliers\n\n**Smart Optimization:**\n• Optimize SQL queries\n• Compress report size\n• Speed up loading time\n\n**Intelligent Translation:**\n• Auto-translate reports\n• Adapt layout for RTL languages\n• Optimize Arabic fonts\n\n✨ **Coming Soon**: Voice-powered report generation!';
+        }
+        
+        if (lowerMessage.includes('code') || lowerMessage.includes('api') || lowerMessage.includes('example') || lowerMessage.includes('programming')) {
+            return '👨‍💻 **Code Examples & API:**\n\n**Create Report with PL/SQL:**\n```sql\nBEGIN\n  ARC_REPORTS.create_report(\n    p_name => \'Sales Report\',\n    p_query => \'SELECT * FROM sales\',\n    p_template => \'modern_professional\'\n  );\nEND;\n```\n\n**Export via API:**\n```javascript\nfetch(\'/apex/arc/export\', {\n  method: \'POST\',\n  body: JSON.stringify({\n    reportId: 123,\n    format: \'pdf\',\n    locale: \'en\'\n  })\n})\n```\n\n**JavaScript Integration:**\n```javascript\nARC.render({\n  container: \'#report\',\n  data: salesData,\n  theme: \'professional\'\n});\n```\n\n📚 **More Examples**: docs.apex-reportcraft.com/examples';
+        }
+        
+        return '🤖 **Hello! I\'m ARC\'s Smart Technical Expert**\n\nI can help you with:\n🚀 **Quick Start** - Step-by-step setup guide\n💰 **Pricing Plans** - Choose the right plan\n🔧 **Technical Troubleshooting** - Expert technical support\n🗄️ **Database Integration** - Connect data sources\n✨ **AI Features** - Leverage artificial intelligence\n👨‍💻 **Code Examples** - Ready code & API\n\n**Ask your question or choose from buttons above! 🎯**';
     }
 
     // Send message
     function sendMessage() {
         const message = chatInput.value.trim();
         if (!message) return;
+
+        // Track chatbot usage
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'chatbot_message', {
+                event_category: 'Chatbot',
+                event_label: 'user_message',
+                language: getCurrentLanguage()
+            });
+        }
 
         // Add user message
         addMessage(message, true);
@@ -267,6 +305,15 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             const response = getBotResponse(message);
             addMessage(response);
+            
+            // Track bot response
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'chatbot_response', {
+                    event_category: 'Chatbot',
+                    event_label: 'bot_response',
+                    language: getCurrentLanguage()
+                });
+            }
         }, 1000);
     }
 
@@ -295,12 +342,66 @@ document.addEventListener('DOMContentLoaded', function() {
     quickBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             const buttonText = this.textContent.trim();
+            
+            // Track quick button clicks
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'quick_button_click', {
+                    event_category: 'Chatbot',
+                    event_label: buttonText,
+                    language: getCurrentLanguage()
+                });
+            }
+            
             addMessage(buttonText, true);
             
             setTimeout(() => {
                 const response = getBotResponse(buttonText);
                 addMessage(response);
             }, 1000);
+        });
+    });
+
+    // Track pricing plan clicks
+    document.querySelectorAll('a[href*="signup?plan="], a[href*="contact/enterprise"]').forEach(link => {
+        link.addEventListener('click', function() {
+            const href = this.getAttribute('href');
+            let plan = 'unknown';
+            
+            if (href.includes('plan=free')) plan = 'free';
+            else if (href.includes('plan=pro')) plan = 'pro';
+            else if (href.includes('plan=developer')) plan = 'developer';
+            else if (href.includes('enterprise')) plan = 'enterprise';
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'pricing_click', {
+                    event_category: 'Pricing',
+                    event_label: plan,
+                    language: getCurrentLanguage(),
+                    value: plan === 'pro' ? 29 : plan === 'developer' ? 59 : plan === 'enterprise' ? 149 : 0
+                });
+            }
+        });
+    });
+
+    // Track social media clicks
+    document.querySelectorAll('a[href*="discord.gg"], a[href*="github.com"], a[href*="community"], a[href*="twitter.com"], a[href*="linkedin.com"]').forEach(link => {
+        link.addEventListener('click', function() {
+            const href = this.getAttribute('href');
+            let platform = 'unknown';
+            
+            if (href.includes('discord')) platform = 'discord';
+            else if (href.includes('github')) platform = 'github';
+            else if (href.includes('community')) platform = 'community';
+            else if (href.includes('twitter')) platform = 'twitter';
+            else if (href.includes('linkedin')) platform = 'linkedin';
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'social_click', {
+                    event_category: 'Social',
+                    event_label: platform,
+                    language: getCurrentLanguage()
+                });
+            }
         });
     });
 });
