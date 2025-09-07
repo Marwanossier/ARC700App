@@ -197,6 +197,63 @@ export interface Translations {
       hours: string;
     };
   };
+  
+  // Signup Page
+  signup: {
+    title: string;
+    subtitle: string;
+    form: {
+      firstName: string;
+      lastName: string;
+      email: string;
+      password: string;
+      confirmPassword: string;
+      company: string;
+      role: string;
+      phone: string;
+      country: string;
+      agreeTerms: string;
+      newsletter: string;
+      submit: string;
+    };
+    benefits: {
+      title: string;
+      items: string[];
+    };
+    social: {
+      title: string;
+      google: string;
+      github: string;
+      microsoft: string;
+    };
+    login: {
+      title: string;
+      link: string;
+    };
+  };
+  
+  // Blog Page
+  blog: {
+    title: string;
+    subtitle: string;
+    categories: {
+      all: string;
+      tutorials: string;
+      features: string;
+      news: string;
+      tips: string;
+    };
+    search: {
+      placeholder: string;
+      button: string;
+    };
+    readMore: string;
+    author: string;
+    publishedOn: string;
+    readTime: string;
+    tags: string;
+    noResults: string;
+  };
 }
 
 // Arabic translations
@@ -410,6 +467,70 @@ export const ar: Translations = {
       email: "info@apexreportcraft.com",
       hours: "الأحد - الخميس: 9:00 ص - 6:00 م"
     }
+  },
+  
+  // Signup Page Arabic
+  signup: {
+    title: "🚀 انضم إلى ثورة التقارير",
+    subtitle: "ابدأ رحلتك مع ARC واكتشف قوة الذكاء الاصطناعي في إنشاء تقارير استثنائية",
+    form: {
+      firstName: "الاسم الأول",
+      lastName: "الاسم الأخير", 
+      email: "البريد الإلكتروني",
+      password: "كلمة المرور",
+      confirmPassword: "تأكيد كلمة المرور",
+      company: "اسم الشركة",
+      role: "المنصب الوظيفي",
+      phone: "رقم الهاتف",
+      country: "البلد",
+      agreeTerms: "أوافق على شروط الاستخدام وسياسة الخصوصية",
+      newsletter: "أريد تلقي النشرة الإخبارية وآخر الأخبار",
+      submit: "🎯 إنشاء الحساب المجاني"
+    },
+    benefits: {
+      title: "🌟 لماذا تختار ARC؟",
+      items: [
+        "🤖 مساعد الذكاء الاصطناعي المتقدم",
+        "🌍 دعم كامل للغة العربية مع RTL",
+        "⚡ إنشاء تقارير في دقائق وليس ساعات",
+        "🔒 أمان متقدم وحماية البيانات",
+        "📞 دعم فني 24/7 باللغة العربية",
+        "🆓 خطة مجانية إلى الأبد"
+      ]
+    },
+    social: {
+      title: "أو سجل باستخدام:",
+      google: "متابعة مع Google",
+      github: "متابعة مع GitHub", 
+      microsoft: "متابعة مع Microsoft"
+    },
+    login: {
+      title: "لديك حساب بالفعل؟",
+      link: "تسجيل الدخول"
+    }
+  },
+  
+  // Blog Page Arabic
+  blog: {
+    title: "📚 مدونة ARC",
+    subtitle: "اكتشف أحدث النصائح والحيل والتقنيات لتطوير تقارير Oracle APEX الاحترافية",
+    categories: {
+      all: "جميع المقالات",
+      tutorials: "دروس تعليمية",
+      features: "الميزات الجديدة", 
+      news: "الأخبار",
+      tips: "نصائح وحيل"
+    },
+    search: {
+      placeholder: "ابحث في المقالات...",
+      button: "بحث"
+    },
+    readMore: "قراءة المزيد",
+    author: "الكاتب",
+    publishedOn: "نُشر في",
+    readTime: "دقائق قراءة",
+    tags: "التصنيفات",
+    noResults: "لم يتم العثور على مقالات مطابقة لبحثك"
   }
 };
 
@@ -624,6 +745,70 @@ export const en: Translations = {
       email: "info@apexreportcraft.com",
       hours: "Sunday - Thursday: 9:00 AM - 6:00 PM"
     }
+  },
+  
+  // Signup Page English
+  signup: {
+    title: "🚀 Join the Reporting Revolution",
+    subtitle: "Start your journey with ARC and discover the power of AI in creating exceptional reports",
+    form: {
+      firstName: "First Name",
+      lastName: "Last Name",
+      email: "Email Address",
+      password: "Password",
+      confirmPassword: "Confirm Password",
+      company: "Company Name",
+      role: "Job Title",
+      phone: "Phone Number", 
+      country: "Country",
+      agreeTerms: "I agree to the Terms of Service and Privacy Policy",
+      newsletter: "I want to receive newsletter and latest updates",
+      submit: "🎯 Create Free Account"
+    },
+    benefits: {
+      title: "🌟 Why Choose ARC?",
+      items: [
+        "🤖 Advanced AI Assistant",
+        "🌍 Full Arabic Support with RTL", 
+        "⚡ Create reports in minutes, not hours",
+        "🔒 Advanced security and data protection",
+        "📞 24/7 Arabic technical support",
+        "🆓 Free plan forever"
+      ]
+    },
+    social: {
+      title: "Or sign up with:",
+      google: "Continue with Google",
+      github: "Continue with GitHub",
+      microsoft: "Continue with Microsoft"
+    },
+    login: {
+      title: "Already have an account?",
+      link: "Sign In"
+    }
+  },
+  
+  // Blog Page English
+  blog: {
+    title: "📚 ARC Blog",
+    subtitle: "Discover the latest tips, tricks, and techniques for developing professional Oracle APEX reports",
+    categories: {
+      all: "All Articles",
+      tutorials: "Tutorials",
+      features: "New Features",
+      news: "News", 
+      tips: "Tips & Tricks"
+    },
+    search: {
+      placeholder: "Search articles...",
+      button: "Search"
+    },
+    readMore: "Read More",
+    author: "Author",
+    publishedOn: "Published on",
+    readTime: "min read",
+    tags: "Tags",
+    noResults: "No articles found matching your search"
   }
 };
 
@@ -775,6 +960,121 @@ export const tr: Translations = {
       security: "Güvenlik"
     },
     copyright: "© 2024 Apex ReportCraft. Tüm hakları saklıdır."
+  },
+
+  about: {
+    title: "Hakkımızda",
+    subtitle: "Oracle APEX için raporlama çözümleri geliştirmede uzmanlaşmış bir ekibiz",
+    story: {
+      title: "Hikayemiz",
+      content: "Yolculuğumuz Oracle APEX için profesyonel ve entegre bir raporlama çözümüne duyulan acil ihtiyacı fark etmekle başladı."
+    },
+    mission: {
+      title: "Misyonumuz", 
+      content: "Misyonumuz geliştiricileri ve kuruluşları kolayca profesyonel ve etkileşimli raporlar oluşturabilmeleri için güçlendirmektir."
+    },
+    team: {
+      title: "Ekibimiz",
+      content: "Ekibimiz Oracle APEX, rapor geliştirme ve yapay zeka uzmanlarından oluşur."
+    }
+  },
+
+  vision: {
+    title: "Vizyonumuz",
+    subtitle: "Oracle APEX raporlama dünyasında ilk ve en güvenilir çözüm olmaya çalışıyoruz",
+    ourVision: {
+      title: "Vizyonumuz", 
+      content: "Oracle APEX'te raporlama çözümlerinin altın standardı haline gelmek."
+    },
+    values: {
+      title: "Değerlerimiz",
+      innovation: "İnovasyon: Tasarımda AI gibi en yeni teknolojileri sunmak için sürekli yenilik yapıyoruz",
+      quality: "Kalite: Ürün ve hizmetlerimizin her alanında mükemmellik için çabalıyoruz", 
+      support: "Destek: 24/7 mükemmel destek sağlıyoruz",
+      community: "Topluluk: Bölgede güçlü bir geliştirici ve uzman topluluğu oluşturuyoruz"
+    }
+  },
+
+  contact: {
+    title: "İletişime Geçin",
+    subtitle: "Size yardımcı olmak için buradayız. İstediğiniz zaman bizimle iletişime geçin",
+    form: {
+      name: "Tam Ad",
+      email: "E-posta Adresi", 
+      subject: "Konu",
+      message: "Mesaj",
+      send: "Mesaj Gönder"
+    },
+    info: {
+      address: "Türkiye, İstanbul",
+      phone: "+90 212 123 4567",
+      email: "info@apexreportcraft.com.tr",
+      hours: "Pazartesi - Cuma: 09:00 - 18:00"
+    }
+  },
+  
+  // Signup Page Turkish
+  signup: {
+    title: "🚀 Raporlama Devrimine Katılın",
+    subtitle: "ARC ile yolculuğunuza başlayın ve istisnai raporlar oluşturmada AI'nın gücünü keşfedin",
+    form: {
+      firstName: "Ad",
+      lastName: "Soyad",
+      email: "E-posta Adresi",
+      password: "Şifre",
+      confirmPassword: "Şifre Onayı", 
+      company: "Şirket Adı",
+      role: "İş Unvanı",
+      phone: "Telefon Numarası",
+      country: "Ülke",
+      agreeTerms: "Hizmet Koşullarını ve Gizlilik Politikasını kabul ediyorum",
+      newsletter: "Bülten ve son güncellemeleri almak istiyorum",
+      submit: "🎯 Ücretsiz Hesap Oluştur"
+    },
+    benefits: {
+      title: "🌟 Neden ARC'yi Seçmelisiniz?",
+      items: [
+        "🤖 Gelişmiş AI Asistanı",
+        "🌍 RTL ile Tam Türkçe Desteği",
+        "⚡ Saatler değil, dakikalar içinde rapor oluşturun", 
+        "🔒 İleri düzey güvenlik ve veri koruması",
+        "📞 24/7 Türkçe teknik destek",
+        "🆓 Sonsuza kadar ücretsiz plan"
+      ]
+    },
+    social: {
+      title: "Veya şununla kayıt olun:",
+      google: "Google ile Devam Et",
+      github: "GitHub ile Devam Et",
+      microsoft: "Microsoft ile Devam Et"
+    },
+    login: {
+      title: "Zaten hesabınız var mı?",
+      link: "Giriş Yap"
+    }
+  },
+  
+  // Blog Page Turkish
+  blog: {
+    title: "📚 ARC Blog",
+    subtitle: "Profesyonel Oracle APEX raporları geliştirmek için en son ipuçları, püf noktaları ve teknikleri keşfedin",
+    categories: {
+      all: "Tüm Makaleler",
+      tutorials: "Eğitimler",
+      features: "Yeni Özellikler",
+      news: "Haberler",
+      tips: "İpuçları ve Püf Noktaları"
+    },
+    search: {
+      placeholder: "Makalelerde ara...",
+      button: "Ara"
+    },
+    readMore: "Devamını Oku",
+    author: "Yazar", 
+    publishedOn: "Yayınlanma Tarihi",
+    readTime: "dk okuma",
+    tags: "Etiketler", 
+    noResults: "Aramanızla eşleşen makale bulunamadı"
   }
 };
 
@@ -926,6 +1226,121 @@ export const hi: Translations = {
       security: "सुरक्षा"
     },
     copyright: "© 2024 Apex ReportCraft। सभी अधिकार सुरक्षित।"
+  },
+
+  about: {
+    title: "हमारे बारे में",
+    subtitle: "हम Oracle APEX के लिए रिपोर्टिंग समाधान विकसित करने में विशेषज्ञ विशेषज्ञों की एक टीम हैं",
+    story: {
+      title: "हमारी कहानी", 
+      content: "हमारी यात्रा Oracle APEX के लिए एक पेशेवर और एकीकृत रिपोर्टिंग समाधान की तत्काल आवश्यकता को पहचानने से शुरू हुई।"
+    },
+    mission: {
+      title: "हमारा मिशन",
+      content: "हमारा मिशन डेवलपर्स और संगठनों को आसानी से पेशेवर और इंटरैक्टिव रिपोर्ट बनाने के लिए सशक्त बनाना है।"
+    },
+    team: {
+      title: "हमारी टीम",
+      content: "हमारी टीम Oracle APEX, रिपोर्ट डेवलपमेंट और आर्टिफिशियल इंटेलिजेंस के विशेषज्ञों से मिलकर बनी है।"
+    }
+  },
+
+  vision: {
+    title: "हमारा विज़न", 
+    subtitle: "हम Oracle APEX रिपोर्टिंग की दुनिया में पहला और सबसे भरोसेमंद समाधान बनने का प्रयास करते हैं",
+    ourVision: {
+      title: "हमारा विज़न",
+      content: "Oracle APEX में रिपोर्टिंग समाधानों के लिए गोल्ड स्टैंडर्ड बनना।"
+    },
+    values: {
+      title: "हमारे मूल्य",
+      innovation: "नवाचार: हम डिज़ाइन में AI जैसी नवीनतम तकनीकों को प्रदान करने के लिए लगातार नवाचार करते हैं",
+      quality: "गुणवत्ता: हम अपने उत्पाद और सेवाओं के हर पहलू में उत्कृष्टता के लिए प्रयास करते हैं",
+      support: "सहायता: हम 24/7 असाधारण सहायता प्रदान करते हैं", 
+      community: "समुदाय: हम क्षेत्र में डेवलपर्स और विशेषज्ञों का एक मजबूत समुदाय बनाते हैं"
+    }
+  },
+
+  contact: {
+    title: "हमसे संपर्क करें",
+    subtitle: "हम आपकी सहायता के लिए यहाँ हैं। किसी भी समय हमसे संपर्क करें",
+    form: {
+      name: "पूरा नाम",
+      email: "ईमेल पता",
+      subject: "विषय", 
+      message: "संदेश",
+      send: "संदेश भेजें"
+    },
+    info: {
+      address: "भारत, मुंबई",
+      phone: "+91 22 123 4567",
+      email: "info@apexreportcraft.in", 
+      hours: "सोमवार - शुक्रवार: 09:00 - 18:00"
+    }
+  },
+  
+  // Signup Page Hindi
+  signup: {
+    title: "🚀 रिपोर्टिंग क्रांति में शामिल हों",
+    subtitle: "ARC के साथ अपनी यात्रा शुरू करें और असाधारण रिपोर्ट बनाने में AI की शक्ति की खोज करें",
+    form: {
+      firstName: "पहला नाम",
+      lastName: "अंतिम नाम",
+      email: "ईमेल पता", 
+      password: "पासवर्ड",
+      confirmPassword: "पासवर्ड की पुष्टि करें",
+      company: "कंपनी का नाम",
+      role: "नौकरी का शीर्षक",
+      phone: "फ़ोन नंबर",
+      country: "देश",
+      agreeTerms: "मैं सेवा की शर्तों और गोपनीयता नीति से सहमत हूँ",
+      newsletter: "मैं न्यूज़लेटर और नवीनतम अपडेट प्राप्त करना चाहता हूँ", 
+      submit: "🎯 निःशुल्क खाता बनाएं"
+    },
+    benefits: {
+      title: "🌟 ARC क्यों चुनें?",
+      items: [
+        "🤖 उन्नत AI असिस्टेंट",
+        "🌍 RTL के साथ पूर्ण हिंदी सहायता",
+        "⚡ घंटों में नहीं, मिनटों में रिपोर्ट बनाएं",
+        "🔒 उन्नत सुरक्षा और डेटा सुरक्षा", 
+        "📞 24/7 हिंदी तकनीकी सहायता",
+        "🆓 हमेशा के लिए निःशुल्क योजना"
+      ]
+    },
+    social: {
+      title: "या इसके साथ साइन अप करें:",
+      google: "Google के साथ जारी रखें", 
+      github: "GitHub के साथ जारी रखें",
+      microsoft: "Microsoft के साथ जारी रखें"
+    },
+    login: {
+      title: "क्या आपका पहले से खाता है?",
+      link: "साइन इन करें"
+    }
+  },
+  
+  // Blog Page Hindi
+  blog: {
+    title: "📚 ARC ब्लॉग",
+    subtitle: "पेशेवर Oracle APEX रिपोर्ट विकसित करने के लिए नवीनतम टिप्स, ट्रिक्स और तकनीकों की खोज करें",
+    categories: {
+      all: "सभी लेख", 
+      tutorials: "ट्यूटोरियल",
+      features: "नई सुविधाएं",
+      news: "समाचार",
+      tips: "टिप्स और ट्रिक्स"
+    },
+    search: {
+      placeholder: "लेखों में खोजें...",
+      button: "खोजें"
+    },
+    readMore: "और पढ़ें",
+    author: "लेखक",
+    publishedOn: "प्रकाशित",
+    readTime: "मिनट पढ़ना",
+    tags: "टैग", 
+    noResults: "आपकी खोज से मेल खाने वाले कोई लेख नहीं मिले"
   }
 };
 
@@ -1077,6 +1492,121 @@ export const de: Translations = {
       security: "Sicherheit"
     },
     copyright: "© 2024 Apex ReportCraft. Alle Rechte vorbehalten."
+  },
+
+  about: {
+    title: "Über uns",
+    subtitle: "Wir sind ein Expertenteam, das sich auf die Entwicklung von Reporting-Lösungen für Oracle APEX spezialisiert hat",
+    story: {
+      title: "Unsere Geschichte",
+      content: "Unsere Reise begann mit der Erkenntnis des dringenden Bedarfs an einer professionellen und integrierten Reporting-Lösung für Oracle APEX."
+    },
+    mission: {
+      title: "Unsere Mission",
+      content: "Unsere Mission ist es, Entwickler und Organisationen zu befähigen, einfach professionelle und interaktive Berichte zu erstellen."
+    },
+    team: {
+      title: "Unser Team",
+      content: "Unser Team besteht aus Experten in Oracle APEX, Berichtsentwicklung und künstlicher Intelligenz."
+    }
+  },
+
+  vision: {
+    title: "Unsere Vision",
+    subtitle: "Wir streben danach, die erste und vertrauenswürdigste Lösung in der Welt des Oracle APEX-Reportings zu werden",
+    ourVision: {
+      title: "Unsere Vision",
+      content: "Der Goldstandard für Reporting-Lösungen in Oracle APEX zu werden."
+    },
+    values: {
+      title: "Unsere Werte",
+      innovation: "Innovation: Wir innovieren kontinuierlich, um die neuesten Technologien wie AI im Design zu liefern",
+      quality: "Qualität: Wir streben nach Exzellenz in jedem Aspekt unseres Produkts und Services",
+      support: "Support: Wir bieten außergewöhnlichen 24/7 Support",
+      community: "Gemeinschaft: Wir bauen eine starke Gemeinschaft von Entwicklern und Experten in der Region auf"
+    }
+  },
+
+  contact: {
+    title: "Kontaktieren Sie uns",
+    subtitle: "Wir sind hier, um Ihnen zu helfen. Kontaktieren Sie uns jederzeit",
+    form: {
+      name: "Vollständiger Name",
+      email: "E-Mail-Adresse",
+      subject: "Betreff",
+      message: "Nachricht",
+      send: "Nachricht senden"
+    },
+    info: {
+      address: "Deutschland, Berlin",
+      phone: "+49 30 123 4567",
+      email: "info@apexreportcraft.de",
+      hours: "Montag - Freitag: 09:00 - 18:00"
+    }
+  },
+  
+  // Signup Page German
+  signup: {
+    title: "🚀 Treten Sie der Reporting-Revolution bei",
+    subtitle: "Beginnen Sie Ihre Reise mit ARC und entdecken Sie die Macht der KI bei der Erstellung außergewöhnlicher Berichte",
+    form: {
+      firstName: "Vorname",
+      lastName: "Nachname",
+      email: "E-Mail-Adresse",
+      password: "Passwort",
+      confirmPassword: "Passwort bestätigen",
+      company: "Firmenname",
+      role: "Berufsbezeichnung",
+      phone: "Telefonnummer",
+      country: "Land",
+      agreeTerms: "Ich stimme den Nutzungsbedingungen und der Datenschutzerklärung zu",
+      newsletter: "Ich möchte Newsletter und aktuelle Updates erhalten",
+      submit: "🎯 Kostenloses Konto erstellen"
+    },
+    benefits: {
+      title: "🌟 Warum ARC wählen?",
+      items: [
+        "🤖 Fortschrittlicher KI-Assistent",
+        "🌍 Vollständige deutsche Unterstützung mit RTL",
+        "⚡ Berichte in Minuten, nicht Stunden erstellen",
+        "🔒 Erweiterte Sicherheit und Datenschutz",
+        "📞 24/7 deutscher technischer Support",
+        "🆓 Für immer kostenloser Plan"
+      ]
+    },
+    social: {
+      title: "Oder registrieren Sie sich mit:",
+      google: "Mit Google fortfahren",
+      github: "Mit GitHub fortfahren",
+      microsoft: "Mit Microsoft fortfahren"
+    },
+    login: {
+      title: "Haben Sie bereits ein Konto?",
+      link: "Anmelden"
+    }
+  },
+  
+  // Blog Page German
+  blog: {
+    title: "📚 ARC Blog",
+    subtitle: "Entdecken Sie die neuesten Tipps, Tricks und Techniken für die Entwicklung professioneller Oracle APEX-Berichte",
+    categories: {
+      all: "Alle Artikel",
+      tutorials: "Anleitungen",
+      features: "Neue Features",
+      news: "Nachrichten",
+      tips: "Tipps & Tricks"
+    },
+    search: {
+      placeholder: "Artikel durchsuchen...",
+      button: "Suchen"
+    },
+    readMore: "Weiterlesen",
+    author: "Autor",
+    publishedOn: "Veröffentlicht am",
+    readTime: "Min. Lesezeit",
+    tags: "Tags",
+    noResults: "Keine Artikel gefunden, die Ihrer Suche entsprechen"
   }
 };
 
@@ -1228,6 +1758,121 @@ export const zh: Translations = {
       security: "安全"
     },
     copyright: "© 2024 Apex ReportCraft. 版权所有。"
+  },
+
+  about: {
+    title: "关于我们",
+    subtitle: "我们是专门为Oracle APEX开发报表解决方案的专家团队",
+    story: {
+      title: "我们的故事",
+      content: "我们的旅程始于认识到Oracle APEX急需专业和集成的报表解决方案。"
+    },
+    mission: {
+      title: "我们的使命",
+      content: "我们的使命是赋能开发者和组织轻松创建专业和交互式报表。"
+    },
+    team: {
+      title: "我们的团队",
+      content: "我们的团队由Oracle APEX、报表开发和人工智能方面的专家组成。"
+    }
+  },
+
+  vision: {
+    title: "我们的愿景",
+    subtitle: "我们努力成为Oracle APEX报表世界中第一个也是最值得信赖的解决方案",
+    ourVision: {
+      title: "我们的愿景",
+      content: "成为Oracle APEX报表解决方案的黄金标准。"
+    },
+    values: {
+      title: "我们的价值观",
+      innovation: "创新：我们持续创新以提供设计中的AI等最新技术",
+      quality: "质量：我们在产品和服务的每个方面都追求卓越",
+      support: "支持：我们提供卓越的24/7支持",
+      community: "社区：我们在该地区建立强大的开发者和专家社区"
+    }
+  },
+
+  contact: {
+    title: "联系我们",
+    subtitle: "我们在这里为您提供帮助。随时联系我们",
+    form: {
+      name: "全名",
+      email: "邮箱地址",
+      subject: "主题",
+      message: "消息",
+      send: "发送消息"
+    },
+    info: {
+      address: "中国，北京",
+      phone: "+86 10 123 4567",
+      email: "info@apexreportcraft.cn",
+      hours: "周一 - 周五：09:00 - 18:00"
+    }
+  },
+  
+  // Signup Page Chinese
+  signup: {
+    title: "🚀 加入报表革命",
+    subtitle: "开始您的ARC之旅，发现AI在创建卓越报表中的力量",
+    form: {
+      firstName: "名",
+      lastName: "姓",
+      email: "邮箱地址",
+      password: "密码",
+      confirmPassword: "确认密码",
+      company: "公司名称",
+      role: "职位",
+      phone: "电话号码",
+      country: "国家",
+      agreeTerms: "我同意服务条款和隐私政策",
+      newsletter: "我想接收新闻通讯和最新更新",
+      submit: "🎯 创建免费账户"
+    },
+    benefits: {
+      title: "🌟 为什么选择ARC？",
+      items: [
+        "🤖 高级AI助手",
+        "🌍 完整的中文支持",
+        "⚡ 几分钟而非几小时创建报表",
+        "🔒 高级安全和数据保护",
+        "📞 24/7中文技术支持",
+        "🆓 永久免费计划"
+      ]
+    },
+    social: {
+      title: "或者使用以下方式注册：",
+      google: "使用Google继续",
+      github: "使用GitHub继续",
+      microsoft: "使用Microsoft继续"
+    },
+    login: {
+      title: "已有账户？",
+      link: "登录"
+    }
+  },
+  
+  // Blog Page Chinese
+  blog: {
+    title: "📚 ARC博客",
+    subtitle: "发现开发专业Oracle APEX报表的最新技巧、诀窍和技术",
+    categories: {
+      all: "所有文章",
+      tutorials: "教程",
+      features: "新功能",
+      news: "新闻",
+      tips: "技巧和诀窍"
+    },
+    search: {
+      placeholder: "搜索文章...",
+      button: "搜索"
+    },
+    readMore: "阅读更多",
+    author: "作者",
+    publishedOn: "发布于",
+    readTime: "分钟阅读",
+    tags: "标签",
+    noResults: "未找到与您搜索匹配的文章"
   }
 };
 
@@ -1379,6 +2024,121 @@ export const es: Translations = {
       security: "Seguridad"
     },
     copyright: "© 2024 Apex ReportCraft. Todos los derechos reservados."
+  },
+
+  about: {
+    title: "Acerca de nosotros",
+    subtitle: "Somos un equipo de expertos especializados en desarrollar soluciones de reportes para Oracle APEX",
+    story: {
+      title: "Nuestra historia",
+      content: "Nuestro viaje comenzó con el reconocimiento de la necesidad urgente de una solución profesional e integrada de reportes para Oracle APEX."
+    },
+    mission: {
+      title: "Nuestra misión",
+      content: "Nuestra misión es empoderar a desarrolladores y organizaciones para crear reportes profesionales e interactivos fácilmente."
+    },
+    team: {
+      title: "Nuestro equipo",
+      content: "Nuestro equipo está compuesto por expertos en Oracle APEX, desarrollo de reportes e inteligencia artificial."
+    }
+  },
+
+  vision: {
+    title: "Nuestra visión",
+    subtitle: "Nos esforzamos por ser la primera y más confiable solución en el mundo de reportes de Oracle APEX",
+    ourVision: {
+      title: "Nuestra visión",
+      content: "Convertirnos en el estándar de oro para soluciones de reportes en Oracle APEX."
+    },
+    values: {
+      title: "Nuestros valores",
+      innovation: "Innovación: Innovamos continuamente para entregar las últimas tecnologías como IA en diseño",
+      quality: "Calidad: Nos esforzamos por la excelencia en cada aspecto de nuestro producto y servicios",
+      support: "Soporte: Proporcionamos soporte excepcional 24/7",
+      community: "Comunidad: Construimos una fuerte comunidad de desarrolladores y expertos en la región"
+    }
+  },
+
+  contact: {
+    title: "Contáctanos",
+    subtitle: "Estamos aquí para ayudarte. Contáctanos en cualquier momento",
+    form: {
+      name: "Nombre completo",
+      email: "Dirección de correo",
+      subject: "Asunto",
+      message: "Mensaje",
+      send: "Enviar mensaje"
+    },
+    info: {
+      address: "España, Madrid",
+      phone: "+34 91 123 4567",
+      email: "info@apexreportcraft.es",
+      hours: "Lunes - Viernes: 09:00 - 18:00"
+    }
+  },
+  
+  // Signup Page Spanish
+  signup: {
+    title: "🚀 Únete a la Revolución de Reportes",
+    subtitle: "Inicia tu viaje con ARC y descubre el poder de la IA para crear reportes excepcionales",
+    form: {
+      firstName: "Nombre",
+      lastName: "Apellido",
+      email: "Dirección de correo",
+      password: "Contraseña",
+      confirmPassword: "Confirmar contraseña",
+      company: "Nombre de la empresa",
+      role: "Título del trabajo",
+      phone: "Número de teléfono",
+      country: "País",
+      agreeTerms: "Acepto los Términos de Servicio y la Política de Privacidad",
+      newsletter: "Quiero recibir el boletín y las últimas actualizaciones",
+      submit: "🎯 Crear cuenta gratuita"
+    },
+    benefits: {
+      title: "🌟 ¿Por qué elegir ARC?",
+      items: [
+        "🤖 Asistente de IA avanzado",
+        "🌍 Soporte completo en español con RTL",
+        "⚡ Crear reportes en minutos, no horas",
+        "🔒 Seguridad avanzada y protección de datos",
+        "📞 Soporte técnico 24/7 en español",
+        "🆓 Plan gratuito para siempre"
+      ]
+    },
+    social: {
+      title: "O regístrate con:",
+      google: "Continuar con Google",
+      github: "Continuar con GitHub",
+      microsoft: "Continuar con Microsoft"
+    },
+    login: {
+      title: "¿Ya tienes una cuenta?",
+      link: "Iniciar sesión"
+    }
+  },
+  
+  // Blog Page Spanish
+  blog: {
+    title: "📚 Blog de ARC",
+    subtitle: "Descubre los últimos consejos, trucos y técnicas para desarrollar reportes profesionales de Oracle APEX",
+    categories: {
+      all: "Todos los artículos",
+      tutorials: "Tutoriales",
+      features: "Nuevas características",
+      news: "Noticias",
+      tips: "Consejos y trucos"
+    },
+    search: {
+      placeholder: "Buscar artículos...",
+      button: "Buscar"
+    },
+    readMore: "Leer más",
+    author: "Autor",
+    publishedOn: "Publicado el",
+    readTime: "min de lectura",
+    tags: "Etiquetas",
+    noResults: "No se encontraron artículos que coincidan con su búsqueda"
   }
 };
 
@@ -1530,6 +2290,121 @@ export const it: Translations = {
       security: "Sicurezza"
     },
     copyright: "© 2024 Apex ReportCraft. Tutti i diritti riservati."
+  },
+
+  about: {
+    title: "Chi siamo",
+    subtitle: "Siamo un team di esperti specializzati nello sviluppo di soluzioni di reporting per Oracle APEX",
+    story: {
+      title: "La nostra storia",
+      content: "Il nostro viaggio è iniziato con il riconoscimento del bisogno urgente di una soluzione professionale e integrata di reporting per Oracle APEX."
+    },
+    mission: {
+      title: "La nostra missione",
+      content: "La nostra missione è potenziare sviluppatori e organizzazioni per creare facilmente report professionali e interattivi."
+    },
+    team: {
+      title: "Il nostro team",
+      content: "Il nostro team è composto da esperti in Oracle APEX, sviluppo di report e intelligenza artificiale."
+    }
+  },
+
+  vision: {
+    title: "La nostra visione",
+    subtitle: "Ci sforziamo di essere la prima e più affidabile soluzione nel mondo del reporting Oracle APEX",
+    ourVision: {
+      title: "La nostra visione",
+      content: "Diventare il gold standard per le soluzioni di reporting in Oracle APEX."
+    },
+    values: {
+      title: "I nostri valori",
+      innovation: "Innovazione: Innoviamo continuamente per fornire le ultime tecnologie come l'AI nel design",
+      quality: "Qualità: Ci sforziamo per l'eccellenza in ogni aspetto del nostro prodotto e servizi",
+      support: "Supporto: Forniamo supporto eccezionale 24/7",
+      community: "Comunità: Costruiamo una forte comunità di sviluppatori ed esperti nella regione"
+    }
+  },
+
+  contact: {
+    title: "Contattaci",
+    subtitle: "Siamo qui per aiutarti. Contattaci in qualsiasi momento",
+    form: {
+      name: "Nome completo",
+      email: "Indirizzo email",
+      subject: "Oggetto",
+      message: "Messaggio",
+      send: "Invia messaggio"
+    },
+    info: {
+      address: "Italia, Milano",
+      phone: "+39 02 123 4567",
+      email: "info@apexreportcraft.it",
+      hours: "Lunedì - Venerdì: 09:00 - 18:00"
+    }
+  },
+  
+  // Signup Page Italian
+  signup: {
+    title: "🚀 Unisciti alla Rivoluzione dei Report",
+    subtitle: "Inizia il tuo viaggio con ARC e scopri il potere dell'AI nella creazione di report eccezionali",
+    form: {
+      firstName: "Nome",
+      lastName: "Cognome",
+      email: "Indirizzo email",
+      password: "Password",
+      confirmPassword: "Conferma password",
+      company: "Nome azienda",
+      role: "Titolo lavorativo",
+      phone: "Numero di telefono",
+      country: "Paese",
+      agreeTerms: "Accetto i Termini di Servizio e la Politica sulla Privacy",
+      newsletter: "Voglio ricevere la newsletter e gli ultimi aggiornamenti",
+      submit: "🎯 Crea account gratuito"
+    },
+    benefits: {
+      title: "🌟 Perché scegliere ARC?",
+      items: [
+        "🤖 Assistente AI avanzato",
+        "🌍 Supporto completo italiano con RTL",
+        "⚡ Crea report in minuti, non ore",
+        "🔒 Sicurezza avanzata e protezione dati",
+        "📞 Supporto tecnico 24/7 in italiano",
+        "🆓 Piano gratuito per sempre"
+      ]
+    },
+    social: {
+      title: "O registrati con:",
+      google: "Continua con Google",
+      github: "Continua con GitHub",
+      microsoft: "Continua con Microsoft"
+    },
+    login: {
+      title: "Hai già un account?",
+      link: "Accedi"
+    }
+  },
+  
+  // Blog Page Italian
+  blog: {
+    title: "📚 Blog ARC",
+    subtitle: "Scopri i più recenti suggerimenti, trucchi e tecniche per sviluppare report professionali Oracle APEX",
+    categories: {
+      all: "Tutti gli articoli",
+      tutorials: "Tutorial",
+      features: "Nuove funzionalità",
+      news: "Notizie",
+      tips: "Suggerimenti e trucchi"
+    },
+    search: {
+      placeholder: "Cerca articoli...",
+      button: "Cerca"
+    },
+    readMore: "Leggi di più",
+    author: "Autore",
+    publishedOn: "Pubblicato il",
+    readTime: "min di lettura",
+    tags: "Tag",
+    noResults: "Nessun articolo trovato corrispondente alla tua ricerca"
   }
 };
 
@@ -1681,6 +2556,121 @@ export const ja: Translations = {
       security: "セキュリティ"
     },
     copyright: "© 2024 Apex ReportCraft. 全著作権所有。"
+  },
+
+  about: {
+    title: "私たちについて",
+    subtitle: "私たちはOracle APEXのレポートソリューション開発を専門とする専門家チームです",
+    story: {
+      title: "私たちの物語",
+      content: "私たちの旅は、Oracle APEXのプロフェッショナルで統合されたレポートソリューションの緊急な必要性を認識することから始まりました。"
+    },
+    mission: {
+      title: "私たちの使命",
+      content: "私たちの使命は、開発者と組織がプロフェッショナルでインタラクティブなレポートを簡単に作成できるようにすることです。"
+    },
+    team: {
+      title: "私たちのチーム",
+      content: "私たちのチームは、Oracle APEX、レポート開発、人工知能の専門家で構成されています。"
+    }
+  },
+
+  vision: {
+    title: "私たちのビジョン",
+    subtitle: "Oracle APEXレポートの世界で最初で最も信頼できるソリューションになることを目指しています",
+    ourVision: {
+      title: "私たちのビジョン",
+      content: "Oracle APEXのレポートソリューションのゴールドスタンダードになること。"
+    },
+    values: {
+      title: "私たちの価値観",
+      innovation: "革新：デザインにおけるAIなど最新技術を提供するために継続的に革新しています",
+      quality: "品質：製品とサービスのあらゆる面で卓越性を追求します",
+      support: "サポート：24/7の優れたサポートを提供します",
+      community: "コミュニティ：地域で開発者と専門家の強いコミュニティを構築します"
+    }
+  },
+
+  contact: {
+    title: "お問い合わせ",
+    subtitle: "私たちがお手伝いします。いつでもお気軽にお問い合わせください",
+    form: {
+      name: "フルネーム",
+      email: "メールアドレス",
+      subject: "件名",
+      message: "メッセージ",
+      send: "メッセージを送信"
+    },
+    info: {
+      address: "日本、東京",
+      phone: "+81 3 123 4567",
+      email: "info@apexreportcraft.jp",
+      hours: "月曜日 - 金曜日：09:00 - 18:00"
+    }
+  },
+  
+  // Signup Page Japanese
+  signup: {
+    title: "🚀 レポート革命に参加",
+    subtitle: "ARCでの旅を始めて、優れたレポート作成におけるAIの力を発見してください",
+    form: {
+      firstName: "名",
+      lastName: "姓",
+      email: "メールアドレス",
+      password: "パスワード",
+      confirmPassword: "パスワード確認",
+      company: "会社名",
+      role: "職種",
+      phone: "電話番号",
+      country: "国",
+      agreeTerms: "利用規約とプライバシーポリシーに同意します",
+      newsletter: "ニュースレターと最新情報を受け取りたい",
+      submit: "🎯 無料アカウントを作成"
+    },
+    benefits: {
+      title: "🌟 なぜARCを選ぶのか？",
+      items: [
+        "🤖 高度なAIアシスタント",
+        "🌍 RTL対応完全日本語サポート",
+        "⚡ 時間ではなく分でレポートを作成",
+        "🔒 高度なセキュリティとデータ保護",
+        "📞 24/7日本語技術サポート",
+        "🆓 永久無料プラン"
+      ]
+    },
+    social: {
+      title: "または次でサインアップ：",
+      google: "Googleで続行",
+      github: "GitHubで続行",
+      microsoft: "Microsoftで続行"
+    },
+    login: {
+      title: "既にアカウントをお持ちですか？",
+      link: "サインイン"
+    }
+  },
+  
+  // Blog Page Japanese
+  blog: {
+    title: "📚 ARCブログ",
+    subtitle: "プロフェッショナルなOracle APEXレポート開発のための最新のヒント、コツ、技術を発見してください",
+    categories: {
+      all: "すべての記事",
+      tutorials: "チュートリアル",
+      features: "新機能",
+      news: "ニュース",
+      tips: "ヒントとコツ"
+    },
+    search: {
+      placeholder: "記事を検索...",
+      button: "検索"
+    },
+    readMore: "続きを読む",
+    author: "著者",
+    publishedOn: "公開日",
+    readTime: "分間の読書",
+    tags: "タグ",
+    noResults: "検索に一致する記事が見つかりませんでした"
   }
 };
 
@@ -1832,6 +2822,121 @@ export const id: Translations = {
       security: "Keamanan"
     },
     copyright: "© 2024 Apex ReportCraft. Hak cipta dilindungi."
+  },
+
+  about: {
+    title: "Tentang Kami",
+    subtitle: "Kami adalah tim ahli yang berspesialisasi dalam mengembangkan solusi pelaporan untuk Oracle APEX",
+    story: {
+      title: "Kisah Kami",
+      content: "Perjalanan kami dimulai dengan mengakui kebutuhan mendesak akan solusi pelaporan yang profesional dan terintegrasi untuk Oracle APEX."
+    },
+    mission: {
+      title: "Misi Kami",
+      content: "Misi kami adalah memberdayakan pengembang dan organisasi untuk dengan mudah membuat laporan yang profesional dan interaktif."
+    },
+    team: {
+      title: "Tim Kami",
+      content: "Tim kami terdiri dari para ahli Oracle APEX, pengembangan laporan, dan kecerdasan buatan."
+    }
+  },
+
+  vision: {
+    title: "Visi Kami",
+    subtitle: "Kami berusaha menjadi solusi pertama dan paling terpercaya di dunia pelaporan Oracle APEX",
+    ourVision: {
+      title: "Visi Kami",
+      content: "Menjadi standar emas untuk solusi pelaporan di Oracle APEX."
+    },
+    values: {
+      title: "Nilai-nilai Kami",
+      innovation: "Inovasi: Kami terus berinovasi untuk memberikan teknologi terbaru seperti AI dalam desain",
+      quality: "Kualitas: Kami berusaha untuk keunggulan dalam setiap aspek produk dan layanan kami",
+      support: "Dukungan: Kami menyediakan dukungan luar biasa 24/7",
+      community: "Komunitas: Kami membangun komunitas yang kuat dari pengembang dan ahli di wilayah ini"
+    }
+  },
+
+  contact: {
+    title: "Hubungi Kami",
+    subtitle: "Kami di sini untuk membantu Anda. Hubungi kami kapan saja",
+    form: {
+      name: "Nama Lengkap",
+      email: "Alamat Email",
+      subject: "Subjek",
+      message: "Pesan",
+      send: "Kirim Pesan"
+    },
+    info: {
+      address: "Indonesia, Jakarta",
+      phone: "+62 21 123 4567",
+      email: "info@apexreportcraft.id",
+      hours: "Senin - Jumat: 09:00 - 18:00"
+    }
+  },
+  
+  // Signup Page Indonesian
+  signup: {
+    title: "🚀 Bergabung dengan Revolusi Pelaporan",
+    subtitle: "Mulai perjalanan Anda dengan ARC dan temukan kekuatan AI dalam menciptakan laporan luar biasa",
+    form: {
+      firstName: "Nama Depan",
+      lastName: "Nama Belakang",
+      email: "Alamat Email",
+      password: "Kata Sandi",
+      confirmPassword: "Konfirmasi Kata Sandi",
+      company: "Nama Perusahaan",
+      role: "Jabatan",
+      phone: "Nomor Telepon",
+      country: "Negara",
+      agreeTerms: "Saya menyetujui Syarat Layanan dan Kebijakan Privasi",
+      newsletter: "Saya ingin menerima newsletter dan pembaruan terbaru",
+      submit: "🎯 Buat Akun Gratis"
+    },
+    benefits: {
+      title: "🌟 Mengapa Memilih ARC?",
+      items: [
+        "🤖 Asisten AI Canggih",
+        "🌍 Dukungan Bahasa Indonesia Lengkap dengan RTL",
+        "⚡ Buat laporan dalam hitungan menit, bukan jam",
+        "🔒 Keamanan canggih dan perlindungan data",
+        "📞 Dukungan teknis 24/7 dalam Bahasa Indonesia",
+        "🆓 Rencana gratis selamanya"
+      ]
+    },
+    social: {
+      title: "Atau daftar dengan:",
+      google: "Lanjutkan dengan Google",
+      github: "Lanjutkan dengan GitHub",
+      microsoft: "Lanjutkan dengan Microsoft"
+    },
+    login: {
+      title: "Sudah punya akun?",
+      link: "Masuk"
+    }
+  },
+  
+  // Blog Page Indonesian
+  blog: {
+    title: "📚 Blog ARC",
+    subtitle: "Temukan tips, trik, dan teknik terbaru untuk mengembangkan laporan Oracle APEX profesional",
+    categories: {
+      all: "Semua Artikel",
+      tutorials: "Tutorial",
+      features: "Fitur Baru",
+      news: "Berita",
+      tips: "Tips & Trik"
+    },
+    search: {
+      placeholder: "Cari artikel...",
+      button: "Cari"
+    },
+    readMore: "Baca Selengkapnya",
+    author: "Penulis",
+    publishedOn: "Diterbitkan pada",
+    readTime: "menit baca",
+    tags: "Tag",
+    noResults: "Tidak ada artikel yang ditemukan sesuai dengan pencarian Anda"
   }
 };
 
