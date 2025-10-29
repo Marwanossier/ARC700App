@@ -4,7 +4,7 @@
   "description": "Professional reporting tool for Oracle APEX developers - Multilingual website",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0 --port 3000",
     "dev:sandbox": "wrangler pages dev dist --ip 0.0.0.0 --port 3000",
     "build": "vite build",
     "preview": "wrangler pages dev dist",
@@ -32,7 +32,16 @@
     "cloudflare"
   ],
   "dependencies": {
-    "hono": "^4.9.6"
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@types/react-router-dom": "^5.3.3",
+    "@vitejs/plugin-react": "^5.1.0",
+    "framer-motion": "^12.23.24",
+    "hono": "^4.9.6",
+    "lucide-react": "^0.548.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.4"
   },
   "devDependencies": {
     "@hono/vite-build": "^1.2.0",
