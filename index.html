@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARC - APEX Reporting Made Simple | Oracle APEX Reporting Tool</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="ARC (APEX ReportCraft) - The leading Oracle APEX reporting solution with native integration, AI-powered features, and Arabic RTL support. Transform your data into actionable insights.">
+    <meta name="keywords" content="Oracle APEX, reporting tool, APEX reports, business intelligence, data visualization, Arabic RTL, reporting software">
+    <meta name="author" content="ARC Team">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="ARC - APEX Reporting Made Simple">
+    <meta property="og:description" content="Enterprise-grade reporting tool built on Oracle APEX for scalable, secure business intelligence">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arc.sa">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --arc-blue: #5A9BD5;
+            --arc-orange: #EA6700;
+            --arc-green: #66B032;
+            --arc-gray: #4A4A4A;
+            --arc-light-gray: #F7F9FC;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--arc-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--arc-gray);
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--arc-blue), var(--arc-orange));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--arc-gray);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--arc-blue);
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--arc-blue), var(--arc-orange));
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(90, 155, 213, 0.3);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--arc-blue);
+            border: 2px solid var(--arc-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--arc-blue);
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 6rem 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--arc-blue) 0%, var(--arc-orange) 100%);
+            opacity: 0.95;
+        }
+        
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .trust-bar {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .trust-bar p {
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+        
+        .trust-logos {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0.7;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 6rem 0;
+            background: var(--arc-light-gray);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.125rem;
+            color: #6b7280;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--arc-blue), var(--arc-orange));
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card p {
+            color: #6b7280;
+            line-height: 1.7;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 6rem 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--arc-orange);
+            box-shadow: 0 20px 40px rgba(234, 103, 0, 0.15);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--arc-orange);
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 1rem 0;
+        }
+        
+        .pricing-price span {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #6b7280;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+        
+        .pricing-features li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .pricing-features li i {
+            color: var(--arc-green);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--arc-blue) 0%, var(--arc-orange) 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <span>ARC</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="btn btn-primary">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Transform Your Data into Actionable Insights</h1>
+                <p>Enterprise-grade reporting tool built on Oracle APEX for scalable, secure business intelligence. Native integration, AI-powered features, and complete Arabic RTL support.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2rem;">
+                        <i class="fas fa-rocket" style="margin-right: 0.5rem;"></i>
+                        Start Free Trial
+                    </a>
+                    <a href="#" class="btn btn-secondary" style="font-size: 1.125rem; padding: 1rem 2rem; background: rgba(255,255,255,0.2); border-color: white; color: white;">
+                        <i class="fas fa-play-circle" style="margin-right: 0.5rem;"></i>
+                        Watch Demo
+                    </a>
+                </div>
+                <div class="trust-bar">
+                    <p>Trusted by 850,000+ APEX developers worldwide</p>
+                    <div class="trust-logos">
+                        <span style="font-size: 2rem;">★★★★★</span>
+                        <span>100K+ Active Users</span>
+                        <span>|</span>
+                        <span>99.9% Uptime</span>
+                        <span>|</span>
+                        <span>24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Features Built for Enterprise</h2>
+                <p>Everything you need to create professional, data-driven reports that drive business decisions</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Native APEX Integration</h3>
+                    <p>Pure APEX plug-in that lives entirely within your database. No separate servers, no complex setup. Just seamless integration with your existing Oracle APEX applications.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Powered Assistant</h3>
+                    <p>Smart AI assistant helps you create reports in minutes. Natural language queries, automated insights, and intelligent recommendations for optimal visualizations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Arabic RTL Support</h3>
+                    <p>First APEX reporting tool with native Arabic and RTL language support. Perfect for GCC market with proper localization and cultural considerations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Real-Time Dashboards</h3>
+                    <p>Interactive dashboards with live data processing. Automatic refresh, drill-down capabilities, and responsive design for all devices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-export"></i>
+                    </div>
+                    <h3>Multi-Format Export</h3>
+                    <p>Export to PDF, Excel, Word, CSV, JSON, and more. Custom formatting, batch processing, and automated distribution via email or API.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-level security with role-based access control, audit trails, and compliance frameworks. SOC 2, GDPR, and ISO 27001 compliant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose the Plan That Fits Your Needs</h2>
+                <p>Transparent pricing with no hidden fees. Start free and scale as you grow.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Free Tier -->
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="pricing-price">
+                        $0<span>/month</span>
+                    </div>
+                    <p style="color: #6b7280; margin-bottom: 1.5rem;">Perfect for individual developers</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-circle"></i> 100 reports/month</li>
+                        <li><i class="fas fa-check-circle"></i> 1 user</li>
+                        <li><i class="fas fa-check-circle"></i> Basic templates</li>
+                        <li><i class="fas fa-check-circle"></i> Forum support</li>
+                        <li><i class="fas fa-check-circle"></i> PDF & Excel export</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="width: 100%;">Start Free</a>
+                </div>
+
+                <!-- Developer Pro Tier -->
+                <div class="pricing-card">
+                    <h3>Developer Pro</h3>
+                    <div class="pricing-price">
+                        $29<span>/month</span>
+                    </div>
+                    <p style="color: #6b7280; margin-bottom: 1.5rem;">For small teams & consultants</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-circle"></i> Unlimited reports</li>
+                        <li><i class="fas fa-check-circle"></i> Up to 5 users</li>
+                        <li><i class="fas fa-check-circle"></i> All templates</li>
+                        <li><i class="fas fa-check-circle"></i> Email support</li>
+                        <li><i class="fas fa-check-circle"></i> Custom branding</li>
+                        <li><i class="fas fa-check-circle"></i> API access</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: 100%;">Get Started</a>
+                </div>
+
+                <!-- Pro Tier (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <h3>Professional</h3>
+                    <div class="pricing-price">
+                        $99<span>/month</span>
+                    </div>
+                    <p style="color: #6b7280; margin-bottom: 1.5rem;">For growing businesses</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-circle"></i> Everything in Developer Pro</li>
+                        <li><i class="fas fa-check-circle"></i> Up to 25 users</li>
+                        <li><i class="fas fa-check-circle"></i> Priority support</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check-circle"></i> Team management</li>
+                        <li><i class="fas fa-check-circle"></i> White label option</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="width: 100%;">Get Started</a>
+                </div>
+
+                <!-- Enterprise Tier -->
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="pricing-price">
+                        Custom
+                    </div>
+                    <p style="color: #6b7280; margin-bottom: 1.5rem;">For large organizations</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-circle"></i> Everything in Professional</li>
+                        <li><i class="fas fa-check-circle"></i> Unlimited users</li>
+                        <li><i class="fas fa-check-circle"></i> Dedicated support 24/7</li>
+                        <li><i class="fas fa-check-circle"></i> SLA guarantee</li>
+                        <li><i class="fas fa-check-circle"></i> Custom development</li>
+                        <li><i class="fas fa-check-circle"></i> Account manager</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary" style="width: 100%;">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Reporting?</h2>
+            <p>Join 100,000+ developers who trust ARC for their Oracle APEX reporting needs</p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="#" class="btn" style="background: white; color: var(--arc-blue); font-size: 1.125rem; padding: 1rem 2rem;">
+                    <i class="fas fa-rocket" style="margin-right: 0.5rem;"></i>
+                    Start Free Trial
+                </a>
+                <a href="#" class="btn btn-secondary" style="font-size: 1.125rem; padding: 1rem 2rem; border-color: white;">
+                    <i class="fas fa-calendar" style="margin-right: 0.5rem;"></i>
+                    Schedule Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="/product/features">Features</a></li>
+                        <li><a href="/product/use-cases">Use Cases</a></li>
+                        <li><a href="/product/integrations">Integrations</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="/solutions/developers">For Developers</a></li>
+                        <li><a href="/solutions/business-users">For Business Users</a></li>
+                        <li><a href="/solutions/enterprises">For Enterprises</a></li>
+                        <li><a href="#">By Industry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="/resources/documentation">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="/resources/case-studies">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Webinars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/support">Support</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ARC (APEX ReportCraft). All rights reserved. | <a href="#" style="color: #9ca3af;">Privacy Policy</a> | <a href="#" style="color: #9ca3af;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .pricing-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
